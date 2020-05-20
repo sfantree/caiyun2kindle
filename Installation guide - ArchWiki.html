@@ -1,0 +1,514 @@
+<head>
+<meta charset="UTF-8">
+<title>Installation guide - ArchWiki</title>
+<script>document.documentElement.className="client-js";RLCONF={"wgCanonicalNamespace":"","wgCanonicalSpecialPageName":!1,"wgNamespaceNumber":0,"wgPageName":"Installation_guide","wgTitle":"Installation guide","wgCurRevisionId":605384,"wgRevisionId":605384,"wgArticleId":14801,"wgIsArticle":!0,"wgIsRedirect":!1,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Installation process"],"wgBreakFrames":!1,"wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgMonthNamesShort":["","Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"wgRelevantPageName":"Installation_guide","wgRelevantArticleId":14801,"wgRequestId":"4d09be07b2f6f73dd7b2a8d1","wgCSPNonce":!1,"wgIsProbablyEditable":!1,
+"wgRelevantPageIsProbablyEditable":!1,"wgRestrictionEdit":["sysop"],"wgRestrictionMove":["sysop"]};RLSTATE={"site.styles":"ready","noscript":"ready","user.styles":"ready","user":"ready","user.options":"ready","user.tokens":"loading","mediawiki.legacy.shared":"ready","mediawiki.legacy.commonPrint":"ready","mediawiki.toc.styles":"ready","zzz.ext.archLinux.styles":"ready","skins.vector.styles.responsive":"ready","mediawiki.skinning.interface":"ready","skins.vector.styles":"ready"};RLPAGEMODULES=["site","mediawiki.page.startup","mediawiki.page.ready","mediawiki.toc","mediawiki.searchSuggest","skins.vector.js"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.implement("user.tokens@tffin",function($,jQuery,require,module){/*@nomin*/mw.user.tokens.set({"editToken":"+\\","patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});
+});});</script>
+<link rel="stylesheet" href="/load.php?lang=en&amp;modules=mediawiki.legacy.commonPrint%2Cshared%7Cmediawiki.skinning.interface%7Cmediawiki.toc.styles%7Cskins.vector.styles%7Cskins.vector.styles.responsive%7Czzz.ext.archLinux.styles&amp;only=styles&amp;skin=vector">
+<script async="" src="/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector"></script>
+<style>
+.suggestions{overflow:hidden;position:absolute;top:0;left:0;width:0;border:0;z-index:1099;padding:0;margin:-1px 0 0 0}.suggestions-special{position:relative;background-color:#fff;cursor:pointer;border:1px solid #a2a9b1;margin:0;margin-top:-2px;display:none;padding:0.25em 0.25em;line-height:1.25em}.suggestions-results{background-color:#fff;cursor:pointer;border:1px solid #a2a9b1;padding:0;margin:0}.suggestions-result{color:#000;margin:0;line-height:1.5em;padding:0.01em 0.25em;text-align:left; overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.suggestions-result-current{background-color:#2a4b8d;color:#fff}.suggestions-special .special-label{color:#72777d;text-align:left}.suggestions-special .special-query{color:#000;font-style:italic;text-align:left}.suggestions-special .special-hover{background-color:#c8ccd1}.suggestions-result-current .special-label,.suggestions-result-current .special-query{color:#fff}.highlight{font-weight:bold}
+@media screen {
+	.tochidden,.toctoggle{-moz-user-select:none;-webkit-user-select:none;-ms-user-select:none;user-select:none}.toctoggle{font-size:94%}}
+@media print {
+	.toc.tochidden,.toctoggle{display:none}}</style><style>
+.suggestions a.mw-searchSuggest-link,.suggestions a.mw-searchSuggest-link:hover,.suggestions a.mw-searchSuggest-link:active,.suggestions a.mw-searchSuggest-link:focus{color:#000;text-decoration:none}.suggestions-result-current a.mw-searchSuggest-link,.suggestions-result-current a.mw-searchSuggest-link:hover,.suggestions-result-current a.mw-searchSuggest-link:active,.suggestions-result-current a.mw-searchSuggest-link:focus{color:#fff}.suggestions a.mw-searchSuggest-link .special-query{ overflow:hidden;text-overflow:ellipsis;white-space:nowrap}</style><meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector">
+<meta name="generator" content="MediaWiki 1.34.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="search" type="application/opensearchdescription+xml" href="/opensearch_desc.php" title="ArchWiki (en)">
+<link rel="EditURI" type="application/rsd+xml" href="https://wiki.archlinux.org/api.php?action=rsd">
+<link rel="license" href="http://www.gnu.org/copyleft/fdl.html">
+<link rel="alternate" type="application/atom+xml" title="ArchWiki Atom feed" href="/index.php?title=Special:RecentChanges&amp;feed=atom">
+<!--[if lt IE 9]><script src="/resources/lib/html5shiv/html5shiv.js"></script><![endif]-->
+<style type="text/css">[contenteditable=true]:active,[contenteditable=true]:focus{outline:thin solid #00b977;background-color:rgba(0,185,119,.05)}.cyxy-target-popup{padding:1.3rem 12px;position:absolute;display:inline-flex;flex-direction:row;overflow:scroll;vertical-align:middle;z-index:199099;top:1px;left:1px;background:#fff;opacity:.98;height:auto;width:auto;border:1px solid #e6e6e6;box-shadow:0 0 8px 0 rgba(0,0,0,.13);border-radius:5px}@media (max-width:468px){.cyxy-target-popup{left:10%}}#cyxy-popup-left-slide{margin-right:14px}#cyxy-popup-left-slide,#cyxy-popup-right-slide{height:22px;display:inline;vertical-align:middle;cursor:pointer}#cyxy-popup-right-slide{margin-left:0}#cyxy-popup-userinfo{display:inline}.cyxy-target-count{display:inline;vertical-align:middle;font-size:10px}#cyxy-popup-avatar{display:inline;height:32px;vertical-align:middle;border-radius:16px}#cyxy-popup-name-time{display:inline-flex;flex-direction:column;vertical-align:middle;text-align:left;margin-left:6px}#cyxy-popup-name{font-size:14px;color:#333;height:18px;overflow:hidden;max-width:84px}#cyxy-popup-time{font-size:12px;margin-top:4px;color:#999}.cyxy-footer{display:none;position:fixed;bottom:0;padding:0;left:0;right:0;margin:auto;opacity:.9;border:1px solid #e6e6e6;box-shadow:0 0 8px 0 rgba(0,0,0,.13);border-radius:2px;z-index:201712;text-align:center}.cyxy-footer-p{padding:12px 0;margin:0;font-size:12px;color:#333;background:#fff;text-align:center;line-height:1.6;font-weight:200}#cyxy-popup-favour{text-align:center;display:inline;margin-right:20px;margin-left:46px;cursor:pointer}#cyxy-popup-oppose{text-align:center;display:inline;cursor:pointer}#cyxy-popup-favour-img{display:inline;height:20px;vertical-align:middle}#cyxy-popup-oppose-img{display:inline;height:18px;vertical-align:middle}#cyxy-popup-favour-num,#cyxy-popup-oppose-num{font-size:14px;margin-left:4px;color:#999}@media (max-width:320px){#cyxy-popup-favour{margin-right:.8rem;margin-left:1.5rem}#cyxy-popup-left-slide{margin-right:.8rem}#cyxy-popup-right-slide{margin-left:1rem}}.layui-m-layer{position:relative;z-index:19891014}.layui-m-layer *{box-sizing:content-box}.layui-m-layermain,.layui-m-layershade{position:fixed;left:0;top:0;width:100%;height:100%}.layui-m-layershade{background-color:rgba(0,0,0,.7);pointer-events:auto}.layui-m-layermain{display:table;font-family:Helvetica,arial,sans-serif;pointer-events:none}.layui-m-layermain .layui-m-layersection{display:table-cell;vertical-align:middle;text-align:center}.layui-m-layerchild{position:relative;display:inline-block;text-align:left;background-color:#fff;font-size:14px;border-radius:5px;box-shadow:0 0 8px rgba(0,0,0,.1);pointer-events:auto;-webkit-overflow-scrolling:touch;animation-fill-mode:both;animation-duration:.2s}@keyframes layui-m-anim-scale{0%{opacity:0;transform:scale(.5)}to{opacity:1;transform:scale(1)}}.layui-m-anim-scale{animation-name:layui-m-anim-scale;-webkit-animation-name:layui-m-anim-scale}@keyframes layui-m-anim-up{0%{opacity:0;transform:translateY(800px)}to{opacity:1;transform:translateY(0)}}.layui-m-anim-up{animation-name:layui-m-anim-up}.layui-m-layer0 .layui-m-layerchild{width:90%;max-width:640px}.layui-m-layer1 .layui-m-layerchild{border:none;border-radius:0}.layui-m-layer2 .layui-m-layerchild{width:auto;max-width:260px;min-width:40px;border:none;background:0 0;box-shadow:none;color:#fff}.layui-m-layerchild h3{padding:0 10px;height:60px;line-height:60px;font-size:16px;font-weight:400;border-radius:5px 5px 0 0;text-align:center}.layui-m-layerbtn span,.layui-m-layerchild h3{text-overflow:ellipsis;overflow:hidden;white-space:nowrap}.layui-m-layercont{padding:50px 30px;line-height:22px;text-align:center}.layui-m-layer1 .layui-m-layercont{padding:0;text-align:left}.layui-m-layer2 .layui-m-layercont{text-align:center;padding:0;line-height:0}.layui-m-layer2 .layui-m-layercont i{width:25px;height:25px;margin-left:8px;display:inline-block;background-color:#fff;border-radius:100%;animation:layui-m-anim-loading 1.4s infinite ease-in-out;animation-fill-mode:both}.layui-m-layerbtn,.layui-m-layerbtn span{position:relative;text-align:center;border-radius:0 0 5px 5px}.layui-m-layer2 .layui-m-layercont p{margin-top:20px}@keyframes layui-m-anim-loading{0%,80%,to{transform:scale(0);-webkit-transform:scale(0)}40%{transform:scale(1);-webkit-transform:scale(1)}}.layui-m-layer2 .layui-m-layercont i:first-child{margin-left:0;animation-delay:-.32s}.layui-m-layer2 .layui-m-layercont i.layui-m-layerload{animation-delay:-.16s}.layui-m-layer2 .layui-m-layercont>div{line-height:22px;padding-top:7px;margin-bottom:20px;font-size:14px}.layui-m-layerbtn{display:box;display:-moz-box;display:-webkit-box;width:100%;height:50px;line-height:50px;font-size:0;border-top:1px solid #d0d0d0;background-color:#f2f2f2}.layui-m-layerbtn span{display:block;box-flex:1;-webkit-box-flex:1;font-size:14px;cursor:pointer}.layui-m-layerbtn span[yes]{color:#40affe}.layui-m-layerbtn span[no]{border-right:1px solid #d0d0d0;border-radius:0 0 0 5px}.layui-m-layerbtn span:active{background-color:#f6f6f6}.layui-m-layerend{position:absolute;right:7px;top:10px;width:30px;height:30px;border:0;font-weight:400;background:0 0;cursor:pointer;-webkit-appearance:none;font-size:30px}.layui-m-layerend:after,.layui-m-layerend:before{position:absolute;left:5px;top:15px;content:"";width:18px;height:1px;background-color:#999;transform:rotate(45deg);-webkit-transform:rotate(45deg);border-radius:3px}.layui-m-layerend:after{transform:rotate(-45deg);-webkit-transform:rotate(-45deg)}body .layui-m-layer .layui-m-layer-footer{position:fixed;width:95%;max-width:100%;margin:0 auto;left:0;right:0;bottom:10px;background:0 0}.layui-m-layer-footer .layui-m-layercont{padding:20px;border-radius:5px 5px 0 0;background-color:hsla(0,0%,100%,.8)}.layui-m-layer-footer .layui-m-layerbtn{display:block;height:auto;background:0 0;border-top:none}.layui-m-layer-footer .layui-m-layerbtn span{background-color:hsla(0,0%,100%,.8)}.layui-m-layer-footer .layui-m-layerbtn span[no]{color:#fd482c;border-top:1px solid #c2c2c2;border-radius:0 0 5px 5px}.layui-m-layer-footer .layui-m-layerbtn span[yes]{margin-top:10px;border-radius:5px}body .layui-m-layer .layui-m-layer-msg{width:auto;max-width:90%;margin:0 auto;bottom:-150px;background-color:rgba(0,0,0,.7);color:#fff}.layui-m-layer-msg .layui-m-layercont{padding:10px 20px}.cyxy-function{bottom:70px}.cyxy-function,.cyxy-personal{position:fixed;right:20px;z-index:109999;cursor:pointer}.cyxy-personal{bottom:190px}.cyxy-personal .cyxy-favorite-btn{border:2px solid #5ebb8d;box-sizing:border-box}.cyxy-switch{position:relative;display:inline-block;width:54px;height:28px}.cyxy-switch input{display:none}.slider{cursor:pointer;top:0;left:0;right:0;bottom:0;background-color:#ccc}.slider,.slider:before{position:absolute;transition:.4s}.slider:before{content:"";height:20px;width:20px;left:4px;bottom:4px;background-color:#fff}input:checked+.slider{background-color:#00b976}input:focus+.slider{box-shadow:0 0 1px #00b976}input:checked+.slider:before{transform:translateX(26px)}.cyxy-favorite{position:fixed;bottom:90px;right:20px;z-index:109999;cursor:pointer}.cyxy-favorite-btn{height:36px;width:36px;border-radius:50%;overflow:hidden}.slider.round{border-radius:34px}.slider.round:before{border-radius:50%}.collection-success,.collection-success:hover{color:#fff}.layui-m-layercont .cyxy-trs-target{display:none}.collection-icon{width:12px;height:13px;background:url("http://staging.caiyunapp.com/imgs/layar-target.png") no-repeat;display:inline-block;background-size:cover;background-position:50%}.collection-success>a{margin-left:12px;vertical-align:middle}</style></head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt ns-0 ns-subject page-Installation_guide rootpage-Installation_guide skin-vector action-view"><div id="archnavbar" class="noprint">
+    <div id="archnavbarlogo">
+        <p class="cyxy-trs-source"><a id="logo" href="https://www.archlinux.org/"></a></p>
+    </div>
+    <div id="archnavbarmenu">
+        <ul id="archnavbarlist">
+                        <li id="anb-home"><a href="https://www.archlinux.org/" class="cyxy-trs-source cyxy-trs-source-ted">Home<font class="cyxy-trs-target"> 家</font></a></li>            <li id="anb-packages"><a href="https://www.archlinux.org/packages/" class="cyxy-trs-source cyxy-trs-source-ted">Packages<font class="cyxy-trs-target"> 包装</font></a></li>            <li id="anb-forums"><a href="https://bbs.archlinux.org/" class="cyxy-trs-source cyxy-trs-source-ted">Forums<font class="cyxy-trs-target"> 论坛</font></a></li>            <li id="anb-wiki" class="anb-selected"><a href="https://wiki.archlinux.org/" class="cyxy-trs-source cyxy-trs-source-ted">Wiki<font class="cyxy-trs-target"> 维基</font></a></li>            <li id="anb-bugs"><a href="https://bugs.archlinux.org/" class="cyxy-trs-source cyxy-trs-source-ted">Bugs<font class="cyxy-trs-target"> 虫子</font></a></li>            <li id="anb-security"><a href="https://security.archlinux.org/" class="cyxy-trs-source cyxy-trs-source-ted">Security<font class="cyxy-trs-target"> 保安</font></a></li>            <li id="anb-aur"><a href="https://aur.archlinux.org/" class="cyxy-trs-source cyxy-trs-source-ted">AUR<font class="cyxy-trs-target"> 机器自动驾驶仪</font></a></li>            <li id="anb-download"><a href="https://www.archlinux.org/download/" class="cyxy-trs-source cyxy-trs-source-ted">Download<font class="cyxy-trs-target"> 下载</font></a></li>        </ul>
+    </div>
+</div>
+
+<div id="mw-page-base" class="noprint"></div>
+<div id="mw-head-base" class="noprint"></div>
+<div id="content" class="mw-body" role="main">
+	<a id="top"></a>
+	
+	<div class="mw-indicators mw-body-content">
+</div>
+
+	<h1 id="firstHeading" class="firstHeading cyxy-trs-source cyxy-trs-source-ted" lang="en">Installation guide</h1><h1 id="firstHeading" class="firstHeading cyxy-trs-source cyxy-trs-target" lang="en" contenteditable="false">安装指南</h1>
+	
+	<div id="bodyContent" class="mw-body-content">
+		<div id="siteSub" class="noprint">From ArchWiki</div>
+		<div id="contentSub"></div>
+		
+		
+		
+		<div id="jump-to-nav"></div>
+		<a class="mw-jump-link cyxy-trs-source cyxy-trs-source-ted" href="#mw-head">Jump to navigation<font class="cyxy-trs-target"> 跳转到导航栏</font></a>
+		<a class="mw-jump-link cyxy-trs-source cyxy-trs-source-ted" href="#p-search">Jump to search<font class="cyxy-trs-target"> 跳转到搜索</font></a>
+		<div id="mw-content-text" lang="en" dir="ltr" class="mw-content-ltr"><div class="mw-parser-output"><p class="cyxy-trs-source cyxy-trs-source-ted">This document is a guide for installing <a href="/index.php/Arch_Linux" title="Arch Linux">Arch Linux</a> from the live system booted with the official installation image. Before installing, it would be advised to view the <a href="/index.php/FAQ" class="mw-redirect" title="FAQ">FAQ</a>. For conventions used in this document, see <a href="/index.php/Help:Reading" title="Help:Reading">Help:Reading</a>. In particular, code examples may contain placeholders (formatted in <code><i>italics</i></code>) that must be replaced manually.
+</p><p class="cyxy-trs-source cyxy-trs-target" contenteditable="false">本文档是使用官方安装映像从实时系统启动安装 Arch Linux 的指南。 在安装之前，建议查看 FAQ。 有关本文档中使用的约定，请参阅帮助: 阅读。 特别是，代码示例可能包含占位符(格式为斜体) ，必须手动替换。</p><p class="cyxy-trs-source cyxy-trs-source-ted">For more detailed instructions, see the respective <a href="/index.php/ArchWiki" class="mw-redirect" title="ArchWiki">ArchWiki</a> articles or the various programs' <a href="/index.php/Man_page" title="Man page">man pages</a>, both linked from this guide. For interactive help, the <a href="/index.php/IRC_channel" class="mw-redirect" title="IRC channel">IRC channel</a> and the <a rel="nofollow" class="external text" href="https://bbs.archlinux.org/">forums</a> are also available.
+</p><p class="cyxy-trs-source cyxy-trs-target" contenteditable="false">有关更详细的说明，请参阅各自的 ArchWiki 文章或各种程序的手册页，这两者都链接自本指南。 对于交互式帮助，IRC 频道和论坛也是可用的。</p><p class="cyxy-trs-source cyxy-trs-source-ted">Arch Linux should run on any <a href="https://en.wikipedia.org/wiki/X86-64" class="extiw" title="wikipedia:X86-64">x86_64</a>-compatible machine with a minimum of 512 MiB RAM. A basic installation should take less than 800 MiB of disk space. As the installation process needs to retrieve packages from a remote repository, this guide assumes a working internet connection is available.
+</p><p class="cyxy-trs-source cyxy-trs-target" contenteditable="false">Arch Linux 应该在至少512 MiB RAM 的任何 x8664兼容机器上运行。 一个基本的安装应该占用不到800mib 的磁盘空间。 由于安装过程需要从远程存储库检索包，因此本指南假定有可用的 internet 连接。</p>
+<div id="toc" class="toc"><input type="checkbox" role="button" id="toctogglecheckbox" class="toctogglecheckbox" style="display:none"><div class="toctitle" lang="en" dir="ltr"><h2 class="cyxy-trs-source cyxy-trs-source-ted">Contents</h2><h2 class="cyxy-trs-source cyxy-trs-target" contenteditable="false">内容</h2><span class="toctogglespan"><label class="toctogglelabel" for="toctogglecheckbox"></label></span></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="#Pre-installation"><span class="tocnumber">1</span> <span class="toctext cyxy-trs-source cyxy-trs-source-ted">Pre-installation<font class="cyxy-trs-target"> 安装前</font></span></a>
+<ul>
+<li class="toclevel-2 tocsection-2"><a href="#Verify_signature"><span class="tocnumber">1.1</span> <span class="toctext cyxy-trs-source cyxy-trs-source-ted">Verify signature<font class="cyxy-trs-target"> 验证签名</font></span></a></li>
+<li class="toclevel-2 tocsection-3"><a href="#Boot_the_live_environment"><span class="tocnumber">1.2</span> <span class="toctext cyxy-trs-source cyxy-trs-source-ted">Boot the live environment<font class="cyxy-trs-target" contenteditable="false"> 启动生活环境</font></span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="#Set_the_keyboard_layout"><span class="tocnumber">1.3</span> <span class="toctext cyxy-trs-source cyxy-trs-source-ted">Set the keyboard layout<font class="cyxy-trs-target" contenteditable="false"> 设置键盘布局</font></span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="#Verify_the_boot_mode"><span class="tocnumber">1.4</span> <span class="toctext cyxy-trs-source cyxy-trs-source-ted">Verify the boot mode<font class="cyxy-trs-target" contenteditable="false"> 验证启动模式</font></span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="#Connect_to_the_internet"><span class="tocnumber">1.5</span> <span class="toctext cyxy-trs-source cyxy-trs-source-ted">Connect to the internet<font class="cyxy-trs-target" contenteditable="false"> 连接到互联网</font></span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="#Update_the_system_clock"><span class="tocnumber">1.6</span> <span class="toctext cyxy-trs-source cyxy-trs-source-ted">Update the system clock<font class="cyxy-trs-target" contenteditable="false"> 更新系统时钟</font></span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="#Partition_the_disks"><span class="tocnumber">1.7</span> <span class="toctext cyxy-trs-source cyxy-trs-source-ted">Partition the disks<font class="cyxy-trs-target" contenteditable="false"> 对磁盘进行分区</font></span></a>
+<ul>
+<li class="toclevel-3 tocsection-9"><a href="#Example_layouts"><span class="tocnumber cyxy-trs-source">1.7.1</span> <span class="toctext cyxy-trs-source cyxy-trs-source-ted">Example layouts<font class="cyxy-trs-target"> 示例布局</font></span></a></li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-10"><a href="#Format_the_partitions"><span class="tocnumber">1.8</span> <span class="toctext cyxy-trs-source cyxy-trs-source-ted">Format the partitions<font class="cyxy-trs-target" contenteditable="false"> 格式化分区</font></span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="#Mount_the_file_systems"><span class="tocnumber">1.9</span> <span class="toctext cyxy-trs-source cyxy-trs-source-ted">Mount the file systems<font class="cyxy-trs-target" contenteditable="false"> 装入文件系统</font></span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-12"><a href="#Installation"><span class="tocnumber">2</span> <span class="toctext cyxy-trs-source cyxy-trs-source-ted">Installation<font class="cyxy-trs-target"> 安装</font></span></a>
+<ul>
+<li class="toclevel-2 tocsection-13"><a href="#Select_the_mirrors"><span class="tocnumber">2.1</span> <span class="toctext cyxy-trs-source cyxy-trs-source-ted">Select the mirrors<font class="cyxy-trs-target"> 选择镜子</font></span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="#Install_essential_packages"><span class="tocnumber">2.2</span> <span class="toctext cyxy-trs-source cyxy-trs-source-ted">Install essential packages<font class="cyxy-trs-target" contenteditable="false"> 安装必要的软件包</font></span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-15"><a href="#Configure_the_system"><span class="tocnumber">3</span> <span class="toctext cyxy-trs-source cyxy-trs-source-ted">Configure the system<font class="cyxy-trs-target"> 配置系统</font></span></a>
+<ul>
+<li class="toclevel-2 tocsection-16"><a href="#Fstab"><span class="tocnumber">3.1</span> <span class="toctext cyxy-trs-source">Fstab</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="#Chroot"><span class="tocnumber">3.2</span> <span class="toctext cyxy-trs-source">Chroot</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="#Time_zone"><span class="tocnumber">3.3</span> <span class="toctext cyxy-trs-source cyxy-trs-source-ted">Time zone<font class="cyxy-trs-target"> 时区</font></span></a></li>
+<li class="toclevel-2 tocsection-19"><a href="#Localization"><span class="tocnumber">3.4</span> <span class="toctext cyxy-trs-source cyxy-trs-source-ted">Localization<font class="cyxy-trs-target"> 本地化</font></span></a></li>
+<li class="toclevel-2 tocsection-20"><a href="#Network_configuration"><span class="tocnumber">3.5</span> <span class="toctext cyxy-trs-source cyxy-trs-source-ted">Network configuration<font class="cyxy-trs-target"> 网络配置</font></span></a></li>
+<li class="toclevel-2 tocsection-21"><a href="#Initramfs"><span class="tocnumber">3.6</span> <span class="toctext cyxy-trs-source">Initramfs</span></a></li>
+<li class="toclevel-2 tocsection-22"><a href="#Root_password"><span class="tocnumber">3.7</span> <span class="toctext cyxy-trs-source cyxy-trs-source-ted">Root password<font class="cyxy-trs-target"> 根密码</font></span></a></li>
+<li class="toclevel-2 tocsection-23"><a href="#Boot_loader"><span class="tocnumber">3.8</span> <span class="toctext cyxy-trs-source cyxy-trs-source-ted">Boot loader<font class="cyxy-trs-target" contenteditable="false"> 引导加载程序</font></span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-24"><a href="#Reboot"><span class="tocnumber">4</span> <span class="toctext cyxy-trs-source cyxy-trs-source-ted">Reboot<font class="cyxy-trs-target"> 重启</font></span></a></li>
+<li class="toclevel-1 tocsection-25"><a href="#Post-installation"><span class="tocnumber">5</span> <span class="toctext cyxy-trs-source cyxy-trs-source-ted">Post-installation<font class="cyxy-trs-target"> 安装后</font></span></a></li>
+</ul>
+</div>
+
+<h2><span class="mw-headline cyxy-trs-source cyxy-trs-source-ted" id="Pre-installation">Pre-installation<font class="cyxy-trs-target"> 安装前</font></span></h2>
+<p class="cyxy-trs-source cyxy-trs-source-ted">The installation media and their <a href="/index.php/GnuPG" title="GnuPG">GnuPG</a> signatures can be acquired from the <a rel="nofollow" class="external text" href="https://archlinux.org/download/">Download</a> page.
+</p><p class="cyxy-trs-source cyxy-trs-target" contenteditable="false">可以从下载页获取安装媒体及其 GnuPG 签名。</p>
+<h3><span class="mw-headline cyxy-trs-source cyxy-trs-source-ted" id="Verify_signature">Verify signature<font class="cyxy-trs-target"> 验证签名</font></span></h3>
+<p class="cyxy-trs-source cyxy-trs-source-ted">It is recommended to verify the image signature before use, especially when downloading from an <i>HTTP mirror</i>, where downloads are generally prone to be intercepted to <a rel="nofollow" class="external text" href="https://www2.cs.arizona.edu/stork/packagemanagersecurity/attacks-on-package-managers.html">serve malicious images</a>. 
+</p><p class="cyxy-trs-source cyxy-trs-target" contenteditable="false">建议在使用之前验证镜像签名，尤其是从 HTTP 镜像下载时，因为下载通常很容易被拦截以提供恶意镜像。</p><p class="cyxy-trs-source cyxy-trs-source-ted">On a system with <a href="/index.php/GnuPG" title="GnuPG">GnuPG</a> installed, do this by downloading the <i>PGP signature</i> (under <i>Checksums</i>) to the ISO directory, and <a href="/index.php/GnuPG#Verify_a_signature" title="GnuPG">verifying</a> it with: 
+</p><p class="cyxy-trs-source cyxy-trs-target" contenteditable="false">在安装了 GnuPG 的系统上，可以通过下载 PGP 签名(在 Checksums 下)到 ISO 目录，并用以下方法进行验证:</p>
+<pre>$ gpg --keyserver-options auto-key-retrieve --verify archlinux-<i>version</i>-x86_64.iso.sig
+</pre>
+<p class="cyxy-trs-source cyxy-trs-source-ted">Alternatively, from an existing Arch Linux installation run:
+</p><p class="cyxy-trs-source cyxy-trs-target" contenteditable="false">或者，从现有的 Arch Linux 安装运行:</p>
+<pre>$ pacman-key -v archlinux-<i>version</i>-x86_64.iso.sig
+</pre>
+<div class="archwiki-template-box archwiki-template-box-note"><strong class="cyxy-trs-source">Note:<font class="cyxy-trs-target"> 注意:</font></strong> 
+<ul><li class="cyxy-trs-source cyxy-trs-source cyxy-trs-source">The signature itself could be manipulated if it is downloaded from a mirror site, instead of from <font class="cyxy-trs-target" contenteditable="false"> 如果签名是从镜像站点下载的，而不是从镜像站点下载的，那么签名本身就可以被操纵</font><a rel="nofollow" class="external text" href="https://archlinux.org/download/">archlinux.org</a> as above. In this case, ensure that the public key, which is used to decode the signature, is signed by another, trustworthy key. The <font class="cyxy-trs-target" contenteditable="false"> 如上所述。 在这种情况下，确保用于解码签名的公钥由另一个值得信赖的密钥签名。 这个</font><code>gpg</code> command will output the fingerprint of the public key.<font class="cyxy-trs-target" contenteditable="false"> 命令会输出公钥的指纹</font></li>
+<li class="cyxy-trs-source cyxy-trs-source cyxy-trs-source">Another method to verify the authenticity of the signature is to ensure that the public key's fingerprint is identical to the key fingerprint of the <font class="cyxy-trs-target" contenteditable="false"> 另一个验证签名真伪的方法是确保公用钥匙的指纹与</font><a rel="nofollow" class="external text cyxy-trs-source cyxy-trs-source-ted" href="https://www.archlinux.org/people/developers/">Arch Linux developer<font class="cyxy-trs-target"> 开发者</font></a> who signed the ISO-file. See <font class="cyxy-trs-target" contenteditable="false"> 是谁签署了 iso 文件看</font><a href="https://en.wikipedia.org/wiki/Public-key_cryptography" class="extiw cyxy-trs-source cyxy-trs-source-ted" title="wikipedia:Public-key cryptography">Wikipedia:Public-key cryptography<font class="cyxy-trs-target"> 维基百科: 公开密钥加密</font></a> for more information on the public-key process to authenticate keys.<font class="cyxy-trs-target" contenteditable="false"> 获取有关公开密钥进程的更多信息，以验证密钥</font></li></ul>
+</div>
+<h3><span class="mw-headline cyxy-trs-source cyxy-trs-source-ted" id="Boot_the_live_environment">Boot the live environment<font class="cyxy-trs-target" contenteditable="false"> 启动生活环境</font></span></h3>
+<p class="cyxy-trs-source cyxy-trs-source-ted">The live environment can be booted from a <a href="/index.php/USB_flash_installation_media" title="USB flash installation media">USB flash drive</a>, an <a href="/index.php/Optical_disc_drive#Burning" title="Optical disc drive">optical disc</a> or a network with <a href="/index.php/PXE" title="PXE">PXE</a>. For alternative means of installation, see <a href="/index.php/Category:Installation_process" title="Category:Installation process">Category:Installation process</a>.
+</p><p class="cyxy-trs-source cyxy-trs-target" contenteditable="false">Live 环境可以从 USB 闪存驱动器、光盘或 PXE 网络启动。 有关其他安装方式，请参阅类别: 安装过程。</p>
+<ul><li class="cyxy-trs-source cyxy-trs-source">Pointing the current boot device to a drive containing the Arch installation media is typically achieved by pressing a key during the <font class="cyxy-trs-target" contenteditable="false"> 将当前引导设备指向包含 Arch 安装介质的驱动器通常是通过在</font><a href="https://en.wikipedia.org/wiki/Power-on_self_test" class="extiw cyxy-trs-source cyxy-trs-source-ted" title="wikipedia:Power-on self test">POST<font class="cyxy-trs-target"> 邮报</font></a> phase, as indicated on the splash screen. Refer to your motherboard's manual for details.<font class="cyxy-trs-target" contenteditable="false"> 阶段，如启动画面所示。详细信息请参阅主板手册</font></li>
+<li class="cyxy-trs-source cyxy-trs-source cyxy-trs-source">When the Arch menu appears, select <font class="cyxy-trs-target" contenteditable="false"> 当 Arch 菜单出现时，选择</font><i class="cyxy-trs-source">Boot Arch Linux<font class="cyxy-trs-target" contenteditable="false"> 启动拱 Linux</font></i> and press <font class="cyxy-trs-target"> 然后按</font><code>Enter</code> to enter the installation environment.<font class="cyxy-trs-target" contenteditable="false"> 进入安装环境</font></li>
+<li class="cyxy-trs-source cyxy-trs-source cyxy-trs-source cyxy-trs-source">See <font class="cyxy-trs-target"> 看</font><a rel="nofollow" class="external text cyxy-trs-source cyxy-trs-source-ted" href="https://projects.archlinux.org/archiso.git/tree/docs/README.bootparams">README.bootparams<font class="cyxy-trs-target"> 说明: bootparams</font></a> for a list of <font class="cyxy-trs-target"> 为了一份</font><a href="/index.php/Kernel_parameters#Configuration" title="Kernel parameters" class="cyxy-trs-source cyxy-trs-source-ted">boot parameters<font class="cyxy-trs-target"> 启动参数</font></a>, and <font class="cyxy-trs-target"> ，及</font><a rel="nofollow" class="external text cyxy-trs-source cyxy-trs-source-ted" href="https://git.archlinux.org/archiso.git/tree/configs/releng/packages.x86_64">packages.x86_64<font class="cyxy-trs-target"> Packages.x8664</font></a> for a list of included packages.<font class="cyxy-trs-target"> 包裹清单</font></li>
+<li class="cyxy-trs-source cyxy-trs-source cyxy-trs-source">You will be logged in on the first <font class="cyxy-trs-target" contenteditable="false"> 你将在第一个登录</font><a href="https://en.wikipedia.org/wiki/Virtual_console" class="extiw cyxy-trs-source cyxy-trs-source-ted" title="wikipedia:Virtual console">virtual console<font class="cyxy-trs-target"> 虚拟控制台</font></a> as the root user, and presented with a <font class="cyxy-trs-target" contenteditable="false"> 作为根用户，并显示一个</font><a href="/index.php/Zsh" title="Zsh" class="cyxy-trs-source">Zsh</a> shell prompt.<font class="cyxy-trs-target" contenteditable="false"> 外壳提示符</font></li></ul>
+<p class="cyxy-trs-source cyxy-trs-source-ted">To switch to a different console—for example, to view this guide with <a href="/index.php/ELinks" title="ELinks">ELinks</a> alongside the installation—use the <code>Alt+<i>arrow</i></code> <a href="/index.php/Keyboard_shortcuts" title="Keyboard shortcuts">shortcut</a>. To <a href="/index.php/Textedit" class="mw-redirect" title="Textedit">edit</a> configuration files, <a href="/index.php/Nano#Usage" title="Nano">nano</a>, <a href="https://en.wikipedia.org/wiki/vi" class="extiw" title="wikipedia:vi">vi</a> and <a href="/index.php/Vim#Usage" title="Vim">vim</a> are available.
+</p><p class="cyxy-trs-source cyxy-trs-target" contenteditable="false">要切换到不同的控制台ーー例如，在安装时使用 ELinks 查看本指南ーー请使用 Alt + 箭头快捷键。 要编辑配置文件，可以使用 nano、 vi 和 vim。</p>
+<h3><span class="mw-headline cyxy-trs-source cyxy-trs-source-ted" id="Set_the_keyboard_layout">Set the keyboard layout<font class="cyxy-trs-target" contenteditable="false"> 设置键盘布局</font></span></h3>
+<p class="cyxy-trs-source cyxy-trs-source-ted">The default <a href="/index.php/Console_keymap" class="mw-redirect" title="Console keymap">console keymap</a> is <a href="https://en.wikipedia.org/wiki/File:KB_United_States-NoAltGr.svg" class="extiw" title="wikipedia:File:KB United States-NoAltGr.svg">US</a>. Available layouts can be listed with:
+</p><p class="cyxy-trs-source cyxy-trs-target" contenteditable="false">默认的控制台键盘图是美元。可用的布局可以通过以下方式列出:</p>
+<pre># ls /usr/share/kbd/keymaps/**/*.map.gz
+</pre>
+<p class="cyxy-trs-source cyxy-trs-source-ted">To modify the layout, append a corresponding file name to <span class="plainlinks archwiki-template-man" title="$ man 1 loadkeys"><a rel="nofollow" class="external text" href="https://jlk.fjfi.cvut.cz/arch/manpages/man/loadkeys.1">loadkeys(1)</a></span>, omitting path and file extension. For example, to set a <a href="https://en.wikipedia.org/wiki/File:KB_Germany.svg" class="extiw" title="wikipedia:File:KB Germany.svg">German</a> keyboard layout:
+</p><p class="cyxy-trs-source cyxy-trs-target" contenteditable="false">要修改布局，在 loadkeys (1)中附加相应的文件名，省略路径和文件扩展名。 例如，设置一个德语键盘布局:</p>
+<pre># loadkeys de-latin1
+</pre>
+<p class="cyxy-trs-source cyxy-trs-source-ted"><a href="/index.php/Console_fonts" class="mw-redirect" title="Console fonts">Console fonts</a> are located in <code>/usr/share/kbd/consolefonts/</code> and can likewise be set with <span class="plainlinks archwiki-template-man" title="$ man 8 setfont"><a rel="nofollow" class="external text" href="https://jlk.fjfi.cvut.cz/arch/manpages/man/setfont.8">setfont(8)</a></span>.
+</p><p class="cyxy-trs-source cyxy-trs-target" contenteditable="false">控制台字体位于 / usr / share / kbd / consolefonts / 中，也可以使用 setfont (8)进行设置。</p>
+<h3><span class="mw-headline cyxy-trs-source cyxy-trs-source-ted" id="Verify_the_boot_mode">Verify the boot mode<font class="cyxy-trs-target" contenteditable="false"> 验证启动模式</font></span></h3>
+<p class="cyxy-trs-source cyxy-trs-source-ted">If UEFI mode is enabled on an <a href="/index.php/UEFI" class="mw-redirect" title="UEFI">UEFI</a> motherboard, <a href="/index.php/Archiso" title="Archiso">Archiso</a> will <a href="/index.php/Boot" class="mw-redirect" title="Boot">boot</a> Arch Linux accordingly via <a href="/index.php/Systemd-boot" title="Systemd-boot">systemd-boot</a>. To verify this, list the <a href="/index.php/UEFI#UEFI_variables" class="mw-redirect" title="UEFI">efivars</a> directory:
+</p><p class="cyxy-trs-source cyxy-trs-target" contenteditable="false">如果在 UEFI 主板上启用了 UEFI 模式，Archiso 将相应地通过 systemd-boot 启动 Arch Linux。 为了验证这一点，列出 efivars 目录:</p>
+<pre># ls /sys/firmware/efi/efivars
+</pre>
+<p class="cyxy-trs-source cyxy-trs-source-ted">If the directory does not exist, the system may be booted in <a href="https://en.wikipedia.org/wiki/BIOS" class="extiw" title="wikipedia:BIOS">BIOS</a> or CSM mode. Refer to your motherboard's manual for details.
+</p><p class="cyxy-trs-source cyxy-trs-target" contenteditable="false">如果目录不存在，系统可能以 BIOS 或 CSM 模式启动。 详细信息请参阅主板手册。</p>
+<h3><span class="mw-headline cyxy-trs-source cyxy-trs-source-ted" id="Connect_to_the_internet">Connect to the internet<font class="cyxy-trs-target" contenteditable="false"> 连接到互联网</font></span></h3>
+<p class="cyxy-trs-source cyxy-trs-source-ted">To set up a network connection, go through the following steps:
+</p><p class="cyxy-trs-source cyxy-trs-target" contenteditable="false">要建立网络连接，需要执行以下步骤:</p>
+<ul><li class="cyxy-trs-source cyxy-trs-source">Ensure your <font class="cyxy-trs-target"> 确保你的</font><a href="/index.php/Network_interface" class="mw-redirect cyxy-trs-source cyxy-trs-source-ted" title="Network interface">network interface<font class="cyxy-trs-target"> 网络接口</font></a> is listed and enabled, for example with <font class="cyxy-trs-target" contenteditable="false"> 列出并启用，例如使用</font><span class="plainlinks archwiki-template-man" title="$ man 8 ip-link"><a rel="nofollow" class="external text cyxy-trs-source cyxy-trs-source-ted" href="https://jlk.fjfi.cvut.cz/arch/manpages/man/ip-link.8">ip-link(8)<font class="cyxy-trs-target"> Ip-link (8)</font></a></span>: <pre># ip link</pre></li>
+<li class="cyxy-trs-source">Connect to the network. Plug in the Ethernet cable or <font class="cyxy-trs-target" contenteditable="false"> 连接到网络。插入以太网电缆或</font><a href="/index.php/Wireless_network_configuration" class="mw-redirect cyxy-trs-source cyxy-trs-source-ted" title="Wireless network configuration">connect to the wireless LAN<font class="cyxy-trs-target"> 连接到无线局域网</font></a>.</li>
+<li class="cyxy-trs-source">Configure your network connection:
+<font class="cyxy-trs-target" contenteditable="false"> 配置您的网络连接:</font><ul><li><a href="/index.php/Network_configuration#Static_IP_address" title="Network configuration" class="cyxy-trs-source cyxy-trs-source-ted">Static IP address<font class="cyxy-trs-target"> 静态 IP 地址</font></a></li>
+<li class="cyxy-trs-source">Dynamic IP address: use <font class="cyxy-trs-target" contenteditable="false"> 动态 IP 地址: 使用</font><a href="/index.php/DHCP" class="mw-redirect cyxy-trs-source cyxy-trs-source-ted" title="DHCP">DHCP<font class="cyxy-trs-target"> 主机配置协议</font></a>.</li></ul>
+<dl><dd><div class="archwiki-template-box archwiki-template-box-note cyxy-trs-source cyxy-trs-source cyxy-trs-source"><strong class="cyxy-trs-source">Note:<font class="cyxy-trs-target"> 注意:</font></strong> The installation image enables <font class="cyxy-trs-target" contenteditable="false"> 安装映像启用</font><a href="/index.php/Dhcpcd" title="Dhcpcd" class="cyxy-trs-source">dhcpcd</a> (<code>dhcpcd@<i>interface</i>.service</code>) for <font class="cyxy-trs-target" contenteditable="false"> )免费下载该刊物</font><a rel="nofollow" class="external text cyxy-trs-source cyxy-trs-source-ted" href="https://git.archlinux.org/archiso.git/tree/configs/releng/airootfs/etc/udev/rules.d/81-dhcpcd.rules">wired network devices<font class="cyxy-trs-target"> 有线网络设备</font></a> on boot.<font class="cyxy-trs-target"> 穿靴</font></div></dd></dl></li>
+<li class="cyxy-trs-source">The connection may be verified with <font class="cyxy-trs-target" contenteditable="false"> 这个连接可以用</font><a href="https://en.wikipedia.org/wiki/ping" class="extiw cyxy-trs-source cyxy-trs-source-ted" title="wikipedia:ping">ping<font class="cyxy-trs-target"> 平</font></a>: <pre># ping archlinux.org</pre></li></ul>
+<h3><span class="mw-headline cyxy-trs-source cyxy-trs-source-ted" id="Update_the_system_clock">Update the system clock<font class="cyxy-trs-target" contenteditable="false"> 更新系统时钟</font></span></h3>
+<p class="cyxy-trs-source cyxy-trs-source-ted">Use <span class="plainlinks archwiki-template-man" title="$ man 1 timedatectl"><a rel="nofollow" class="external text" href="https://jlk.fjfi.cvut.cz/arch/manpages/man/timedatectl.1">timedatectl(1)</a></span> to ensure the system clock is accurate:
+</p><p class="cyxy-trs-source cyxy-trs-target" contenteditable="false">使用 timedatectl (1)以确保系统时钟准确:</p>
+<pre># timedatectl set-ntp true
+</pre>
+<p class="cyxy-trs-source cyxy-trs-source-ted">To check the service status, use <code>timedatectl status</code>.
+</p><p class="cyxy-trs-source cyxy-trs-target" contenteditable="false">若要检查服务状态，请使用 timedatectl 状态。</p>
+<h3><span class="mw-headline cyxy-trs-source cyxy-trs-source-ted" id="Partition_the_disks">Partition the disks<font class="cyxy-trs-target" contenteditable="false"> 对磁盘进行分区</font></span></h3>
+<p class="cyxy-trs-source cyxy-trs-source-ted">When recognized by the live system, disks are assigned to a <a href="/index.php/Block_device" class="mw-redirect" title="Block device">block device</a> such as <code>/dev/sda</code> or <code>/dev/nvme0n1</code>. To identify these devices, use <a href="/index.php/Lsblk" class="mw-redirect" title="Lsblk">lsblk</a> or <i>fdisk</i>.
+</p><p class="cyxy-trs-source cyxy-trs-target" contenteditable="false">当活动系统识别磁盘时，磁盘被分配给一个块设备，比如 / dev / sda 或 / dev / nvme0n1。 要识别这些设备，请使用 lsblk 或 fdisk。</p>
+<pre># fdisk -l
+</pre>
+<p class="cyxy-trs-source cyxy-trs-source-ted">Results ending in <code>rom</code>, <code>loop</code> or <code>airoot</code> may be ignored.
+</p><p class="cyxy-trs-source cyxy-trs-target" contenteditable="false">以 rom、 loop 或 airoot 结尾的结果可能被忽略。</p><p class="cyxy-trs-source cyxy-trs-source-ted">The following <a href="/index.php/Partition" class="mw-redirect" title="Partition">partitions</a> are <b>required</b> for a chosen device:
+</p><p class="cyxy-trs-source cyxy-trs-target" contenteditable="false">对于所选择的设备，需要以下分区:</p>
+<ul><li class="cyxy-trs-source">One partition for the root directory <font class="cyxy-trs-target" contenteditable="false"> 根目录的一个分区</font><code>/</code>.</li>
+<li class="cyxy-trs-source cyxy-trs-source">If <font class="cyxy-trs-target"> 如果</font><a href="/index.php/UEFI" class="mw-redirect cyxy-trs-source" title="UEFI">UEFI</a> is enabled, an <font class="cyxy-trs-target" contenteditable="false"> 启用，一个</font><a href="/index.php/EFI_system_partition" title="EFI system partition" class="cyxy-trs-source cyxy-trs-source-ted">EFI system partition<font class="cyxy-trs-target"> EFI系统分区</font></a>.</li></ul>
+<p class="cyxy-trs-source cyxy-trs-source-ted">If you want to create any stacked block devices for <a href="/index.php/LVM" title="LVM">LVM</a>, <a href="/index.php/Dm-crypt" title="Dm-crypt">system encryption</a> or <a href="/index.php/RAID" title="RAID">RAID</a>, do it now.
+</p><p class="cyxy-trs-source cyxy-trs-target" contenteditable="false">如果您想为 LVM、系统加密或 RAID 创建任何堆叠块设备，请现在就创建。</p>
+<h4><span class="mw-headline cyxy-trs-source cyxy-trs-source-ted" id="Example_layouts">Example layouts<font class="cyxy-trs-target"> 示例布局</font></span></h4>
+<table class="wikitable">
+<tbody><tr>
+<th colspan="5" class="cyxy-trs-source">BIOS with <font class="cyxy-trs-target"> 使用</font><a href="/index.php/MBR" class="mw-redirect cyxy-trs-source cyxy-trs-source-ted" title="MBR">MBR<font class="cyxy-trs-target"> 膜反应器</font></a>
+</th></tr>
+<tr>
+<th class="cyxy-trs-source">Mount point
+<font class="cyxy-trs-target"> 安装点</font></th>
+<th class="cyxy-trs-source">Partition
+<font class="cyxy-trs-target"> 分区</font></th>
+<th><a href="https://en.wikipedia.org/wiki/Partition_type" class="extiw cyxy-trs-source cyxy-trs-source-ted" title="wikipedia:Partition type">Partition type<font class="cyxy-trs-target"> 分区类型</font></a>
+</th>
+<th class="cyxy-trs-source">Suggested size
+<font class="cyxy-trs-target" contenteditable="false"> 建议的尺寸</font></th></tr>
+<tr>
+<td><code>/mnt</code>
+</td>
+<td><code>/dev/sd<i>X</i>1</code>
+</td>
+<td class="cyxy-trs-source">Linux
+</td>
+<td class="cyxy-trs-source">Remainder of the device
+<font class="cyxy-trs-target" contenteditable="false"> 设备的其余部分</font></td></tr>
+<tr>
+<td class="cyxy-trs-source">[SWAP]
+<font class="cyxy-trs-target"> [掉期]</font></td>
+<td><code>/dev/sd<i>X</i>2</code>
+</td>
+<td class="cyxy-trs-source">Linux swap
+<font class="cyxy-trs-target" contenteditable="false"> 交换 Linux</font></td>
+<td class="cyxy-trs-source">More than 512 MiB
+<font class="cyxy-trs-target" contenteditable="false"> 超过512 MiB</font></td></tr>
+<tr>
+<th colspan="5" class="cyxy-trs-source">UEFI with <font class="cyxy-trs-target" contenteditable="false"> 联合电动喷气发动机</font><a href="/index.php/GPT" class="mw-redirect cyxy-trs-source cyxy-trs-source-ted" title="GPT">GPT<font class="cyxy-trs-target"> 谷丙转氨酶</font></a>
+</th></tr>
+<tr>
+<th class="cyxy-trs-source">Mount point
+<font class="cyxy-trs-target"> 安装点</font></th>
+<th class="cyxy-trs-source">Partition
+<font class="cyxy-trs-target"> 分区</font></th>
+<th><a href="https://en.wikipedia.org/wiki/GUID_Partition_Table#Partition_type_GUIDs" class="extiw cyxy-trs-source cyxy-trs-source-ted" title="wikipedia:GUID Partition Table">Partition type<font class="cyxy-trs-target"> 分区类型</font></a>
+</th>
+<th class="cyxy-trs-source">Suggested size
+<font class="cyxy-trs-target" contenteditable="false"> 建议的尺寸</font></th></tr>
+<tr>
+<td class="cyxy-trs-source"><code>/mnt/boot</code> or <font class="cyxy-trs-target"> 或</font><code>/mnt/efi</code>
+</td>
+<td><code>/dev/sd<i>X</i>1</code>
+</td>
+<td><a href="/index.php/EFI_system_partition" title="EFI system partition" class="cyxy-trs-source cyxy-trs-source-ted">EFI system partition<font class="cyxy-trs-target"> EFI系统分区</font></a>
+</td>
+<td class="cyxy-trs-source">260–512 MiB
+<font class="cyxy-trs-target" contenteditable="false"> 260-512 MiB</font></td></tr>
+<tr>
+<td><code>/mnt</code>
+</td>
+<td><code>/dev/sd<i>X</i>2</code>
+</td>
+<td class="cyxy-trs-source">Linux x86-64 root (/)
+</td>
+<td class="cyxy-trs-source">Remainder of the device
+<font class="cyxy-trs-target" contenteditable="false"> 设备的其余部分</font></td></tr>
+<tr>
+<td class="cyxy-trs-source">[SWAP]
+<font class="cyxy-trs-target"> [掉期]</font></td>
+<td><code>/dev/sd<i>X</i>3</code>
+</td>
+<td class="cyxy-trs-source">Linux swap
+<font class="cyxy-trs-target" contenteditable="false"> 交换 Linux</font></td>
+<td class="cyxy-trs-source">More than 512 MiB
+<font class="cyxy-trs-target" contenteditable="false"> 超过512 MiB</font></td></tr>
+</tbody></table>
+<p class="cyxy-trs-source cyxy-trs-source-ted">See also <a href="/index.php/Partitioning#Example_layouts" title="Partitioning">Partitioning#Example layouts</a>.
+</p><p class="cyxy-trs-source cyxy-trs-target" contenteditable="false">参见分区 # 示例布局。</p>
+<div class="archwiki-template-box archwiki-template-box-note"><strong class="cyxy-trs-source">Note:<font class="cyxy-trs-target"> 注意:</font></strong> 
+<ul><li class="cyxy-trs-source cyxy-trs-source cyxy-trs-source">Use <font class="cyxy-trs-target"> 使用</font><a href="/index.php/Fdisk" title="Fdisk" class="cyxy-trs-source cyxy-trs-source-ted">fdisk<font class="cyxy-trs-target"> 磁盘</font></a> or <font class="cyxy-trs-target"> 或</font><a href="/index.php/Parted" title="Parted" class="cyxy-trs-source cyxy-trs-source-ted">parted<font class="cyxy-trs-target"> 分开的</font></a> to modify partition tables, for example <font class="cyxy-trs-target" contenteditable="false"> 例如，修改分区表</font><code>fdisk /dev/sd<i>X</i></code>.</li>
+<li class="cyxy-trs-source cyxy-trs-source"><a href="/index.php/Swap" title="Swap" class="cyxy-trs-source cyxy-trs-source-ted">Swap<font class="cyxy-trs-target"> 交换</font></a> space can be set on a <font class="cyxy-trs-target" contenteditable="false"> 空间可以设置在</font><a href="/index.php/Swap_file" class="mw-redirect cyxy-trs-source cyxy-trs-source-ted" title="Swap file">swap file<font class="cyxy-trs-target"> 交换文件</font></a> for file systems supporting it.<font class="cyxy-trs-target" contenteditable="false"> 支持它的文件系统</font></li></ul>
+</div>
+<h3><span class="mw-headline cyxy-trs-source cyxy-trs-source-ted" id="Format_the_partitions">Format the partitions<font class="cyxy-trs-target" contenteditable="false"> 格式化分区</font></span></h3>
+<p class="cyxy-trs-source cyxy-trs-source-ted">Once the partitions have been created, each must be formatted with an appropriate <a href="/index.php/File_system" class="mw-redirect" title="File system">file system</a>. For example, if the root partition is on <code>/dev/sd<i>X</i>1</code> and will contain the <code><i>ext4</i></code> file system, run:
+</p><p class="cyxy-trs-source cyxy-trs-target" contenteditable="false">创建分区之后，必须使用适当的文件系统对每个分区进行格式化。 例如，如果根分区在 / dev / sdx1上，并且包含 ext4文件系统，那么运行:</p>
+<pre># mkfs.<i>ext4</i> /dev/sd<i>X1</i>
+</pre>
+<p class="cyxy-trs-source cyxy-trs-source-ted">If you created a partition for swap, initialize it with <i>mkswap</i>:
+</p><p class="cyxy-trs-source cyxy-trs-target" contenteditable="false">如果你为 swap 创建了一个分区，使用 mkswap 初始化它:</p>
+<pre># mkswap /dev/sd<i>X2</i>
+# swapon /dev/sd<i>X2</i>
+</pre>
+<p class="cyxy-trs-source cyxy-trs-source-ted">See <a href="/index.php/File_systems#Create_a_file_system" title="File systems">File systems#Create a file system</a> for details.
+</p><p class="cyxy-trs-source cyxy-trs-target" contenteditable="false">有关详细信息，请参阅文件系统 # create a File system。</p>
+<h3><span class="mw-headline cyxy-trs-source cyxy-trs-source-ted" id="Mount_the_file_systems">Mount the file systems<font class="cyxy-trs-target" contenteditable="false"> 装入文件系统</font></span></h3>
+<p class="cyxy-trs-source cyxy-trs-source-ted"><a href="/index.php/Mount" class="mw-redirect" title="Mount">Mount</a> the file system on the root partition to <code>/mnt</code>, for example:
+</p><p class="cyxy-trs-source cyxy-trs-target" contenteditable="false">将根分区上的文件系统挂载到 / mnt，例如:</p>
+<pre># mount /dev/sd<i>X1</i> /mnt
+</pre>
+<p class="cyxy-trs-source cyxy-trs-source-ted">Create any remaining mount points (such as <code>/mnt/efi</code>) and mount their corresponding partitions. 
+</p><p class="cyxy-trs-source cyxy-trs-target" contenteditable="false">创建任何剩余的挂载点(例如 / mnt / efi)并挂载它们相应的分区。</p><p class="cyxy-trs-source cyxy-trs-source-ted"><a rel="nofollow" class="external text" href="https://git.archlinux.org/arch-install-scripts.git/tree/genfstab.in">genfstab</a> will later detect mounted file systems and swap space.
+</p><p class="cyxy-trs-source cyxy-trs-target" contenteditable="false">稍后，genfstab 将检测挂载的文件系统和交换空间。</p>
+<h2><span class="mw-headline cyxy-trs-source cyxy-trs-source-ted" id="Installation">Installation<font class="cyxy-trs-target"> 安装</font></span></h2>
+<h3><span class="mw-headline cyxy-trs-source cyxy-trs-source-ted" id="Select_the_mirrors">Select the mirrors<font class="cyxy-trs-target"> 选择镜子</font></span></h3>
+<p class="cyxy-trs-source cyxy-trs-source-ted">Packages to be installed must be downloaded from <a href="/index.php/Mirrors" title="Mirrors">mirror servers</a>, which are defined in <code>/etc/pacman.d/mirrorlist</code>. On the live system, all mirrors are enabled, and sorted by their synchronization status and speed at the time the installation image was created.
+</p><p class="cyxy-trs-source cyxy-trs-target" contenteditable="false">要安装的包必须从镜像服务器下载，这些服务器在 / etc / pacman 中定义。 镜子清单。 在实时系统上，启用所有镜像，并根据创建安装镜像时的同步状态和速度进行排序。</p><p class="cyxy-trs-source cyxy-trs-source-ted">The higher a mirror is placed in the list, the more priority it is given when downloading a package. You may want to edit the file accordingly, and move the geographically closest mirrors to the top of the list, although other criteria should be taken into account.
+</p><p class="cyxy-trs-source cyxy-trs-target" contenteditable="false">镜像在列表中的位置越高，下载包时给它的优先级就越高。 您可能希望相应地编辑文件，并将地理上最接近的镜像移到列表的顶部，尽管应该考虑其他条件。</p><p class="cyxy-trs-source cyxy-trs-source-ted">This file will later be copied to the new system by <i>pacstrap</i>, so it is worth getting right.
+</p><p class="cyxy-trs-source cyxy-trs-target" contenteditable="false">这个文件稍后会被 pacstrap 复制到新的系统中，所以它值得正确使用。</p>
+<h3><span class="mw-headline cyxy-trs-source cyxy-trs-source-ted" id="Install_essential_packages">Install essential packages<font class="cyxy-trs-target" contenteditable="false"> 安装必要的软件包</font></span></h3>
+<p class="cyxy-trs-source cyxy-trs-source-ted">Use the <a rel="nofollow" class="external text" href="https://projects.archlinux.org/arch-install-scripts.git/tree/pacstrap.in">pacstrap</a> script to install the <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://www.archlinux.org/packages/?name=base">base</a></span> package, Linux <a href="/index.php/Kernel" title="Kernel">kernel</a> and firmware for common hardware:
+</p><p class="cyxy-trs-source cyxy-trs-target" contenteditable="false">使用 pacstrap 脚本安装常用硬件的基本包、 Linux 内核和固件:</p>
+<pre># pacstrap /mnt base linux linux-firmware
+</pre>
+<div class="archwiki-template-box archwiki-template-box-tip cyxy-trs-source cyxy-trs-source cyxy-trs-source"><strong class="cyxy-trs-source">Tip:<font class="cyxy-trs-target"> 提示:</font></strong> You can substitute <font class="cyxy-trs-target" contenteditable="false"> 你可以替换</font><span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text cyxy-trs-source" href="https://www.archlinux.org/packages/?name=linux">linux</a></span> for a <font class="cyxy-trs-target"> 为了</font><a href="/index.php/Kernel" title="Kernel" class="cyxy-trs-source cyxy-trs-source-ted">kernel<font class="cyxy-trs-target"> 核</font></a> package of your choice. You can omit the installation of the kernel or the firmware package if you know what you are doing.<font class="cyxy-trs-target" contenteditable="false"> 你自己选吧。 如果知道要做什么，可以省略内核或固件包的安装</font></div>
+<p class="cyxy-trs-source cyxy-trs-source-ted">The <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text" href="https://www.archlinux.org/packages/?name=base">base</a></span> package does not include all tools from the live installation, so installing other packages may be necessary for a fully functional base system. In particular, consider installing:
+</p><p class="cyxy-trs-source cyxy-trs-target" contenteditable="false">基础软件包不包括来自现场安装的所有工具，因此对于功能齐全的基础系统来说，可能需要安装其他软件包。 特别是，考虑安装:</p>
+<ul><li class="cyxy-trs-source cyxy-trs-source">userspace utilities for the management of <font class="cyxy-trs-target" contenteditable="false"> 用户空间管理工具</font><a href="/index.php/File_systems" title="File systems" class="cyxy-trs-source cyxy-trs-source-ted">file systems<font class="cyxy-trs-target"> 文件系统</font></a> that will be used on the system,<font class="cyxy-trs-target" contenteditable="false"> 将会在系统中使用,</font></li>
+<li class="cyxy-trs-source cyxy-trs-source cyxy-trs-source">utilities for accessing <font class="cyxy-trs-target" contenteditable="false"> 用于访问的实用程序</font><a href="/index.php/RAID" title="RAID" class="cyxy-trs-source cyxy-trs-source-ted">RAID<font class="cyxy-trs-target"> 磁盘阵列</font></a> or <font class="cyxy-trs-target"> 或</font><a href="/index.php/LVM" title="LVM" class="cyxy-trs-source cyxy-trs-source-ted">LVM<font class="cyxy-trs-target"> 单板层积材</font></a> partitions,<font class="cyxy-trs-target"> 分区,</font></li>
+<li class="cyxy-trs-source">specific firmware for other devices not included in <font class="cyxy-trs-target" contenteditable="false"> 其他未包括在内的设备的特定固件</font><span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text cyxy-trs-source cyxy-trs-source-ted" href="https://www.archlinux.org/packages/?name=linux-firmware">linux-firmware<font class="cyxy-trs-target"> Linux 固件</font></a></span>,</li>
+<li class="cyxy-trs-source">software necessary for <font class="cyxy-trs-target" contenteditable="false"> 必要的软件</font><a href="/index.php/Networking" class="mw-redirect cyxy-trs-source cyxy-trs-source-ted" title="Networking">networking<font class="cyxy-trs-target"> 网络</font></a>,</li>
+<li>a <a href="/index.php/Text_editor" class="mw-redirect cyxy-trs-source cyxy-trs-source-ted" title="Text editor">text editor<font class="cyxy-trs-target"> 文本编辑程序</font></a>,</li>
+<li class="cyxy-trs-source cyxy-trs-source cyxy-trs-source cyxy-trs-source">packages for accessing documentation in <font class="cyxy-trs-target" contenteditable="false"> 用于访问文档的包</font><a href="/index.php/Man" class="mw-redirect cyxy-trs-source cyxy-trs-source-ted" title="Man">man<font class="cyxy-trs-target"> 男人</font></a> and <font class="cyxy-trs-target"> 及</font><a href="/index.php/Info" class="mw-redirect cyxy-trs-source cyxy-trs-source-ted" title="Info">info<font class="cyxy-trs-target"> 信息</font></a> pages: <font class="cyxy-trs-target"> 页:</font><span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text cyxy-trs-source cyxy-trs-source-ted" href="https://www.archlinux.org/packages/?name=man-db">man-db<font class="cyxy-trs-target"> 人声</font></a></span>, <span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text cyxy-trs-source cyxy-trs-source-ted" href="https://www.archlinux.org/packages/?name=man-pages">man-pages<font class="cyxy-trs-target"> 手册页</font></a></span> and <font class="cyxy-trs-target"> 及</font><span class="plainlinks archwiki-template-pkg"><a rel="nofollow" class="external text cyxy-trs-source" href="https://www.archlinux.org/packages/?name=texinfo">texinfo</a></span>.</li></ul>
+<p class="cyxy-trs-source cyxy-trs-source-ted">To <a href="/index.php/Install" class="mw-redirect" title="Install">install</a> other packages or package groups, append the names to the <i>pacstrap</i> command above (space separated) or use <a href="/index.php/Pacman" title="Pacman">pacman</a> while <a href="#Chroot">chrooted into the new system</a>. For comparison, packages available in the live system can be found in <a rel="nofollow" class="external text" href="https://projects.archlinux.org/archiso.git/tree/configs/releng/packages.x86_64">packages.x86_64</a>.
+</p><p class="cyxy-trs-source cyxy-trs-target" contenteditable="false">若要安装其他软件包或软件包组，请将名称附加到上面的 pacstrap 命令(空格分隔) ，或者在新系统中使用 pacman。 为了便于比较，可以在 packages.x8664中找到活动系统中可用的包。</p>
+<h2><span class="mw-headline cyxy-trs-source cyxy-trs-source-ted" id="Configure_the_system">Configure the system<font class="cyxy-trs-target"> 配置系统</font></span></h2>
+<h3><span class="mw-headline cyxy-trs-source" id="Fstab">Fstab</span></h3>
+<p class="cyxy-trs-source cyxy-trs-source-ted">Generate an <a href="/index.php/Fstab" title="Fstab">fstab</a> file (use <code>-U</code> or <code>-L</code> to define by <a href="/index.php/UUID" class="mw-redirect" title="UUID">UUID</a> or labels, respectively):
+</p><p class="cyxy-trs-source cyxy-trs-target" contenteditable="false">生成一个 fstab 文件(分别使用-u 或-l 通过 UUID 或标签定义) :</p>
+<pre># genfstab -U /mnt &gt;&gt; /mnt/etc/fstab
+</pre>
+<p class="cyxy-trs-source cyxy-trs-source-ted">Check the resulting <code>/mnt/etc/fstab</code> file, and edit it in case of errors.
+</p><p class="cyxy-trs-source cyxy-trs-target" contenteditable="false">检查结果 / mnt / etc / fstab 文件，并在出现错误时对其进行编辑。</p>
+<h3><span class="mw-headline cyxy-trs-source" id="Chroot">Chroot</span></h3>
+<p class="cyxy-trs-source cyxy-trs-source-ted"><a href="/index.php/Change_root" class="mw-redirect" title="Change root">Change root</a> into the new system:
+</p><p class="cyxy-trs-source cyxy-trs-target" contenteditable="false">将 root 更改为新系统:</p>
+<pre># arch-chroot /mnt
+</pre>
+<h3><span class="mw-headline cyxy-trs-source cyxy-trs-source-ted" id="Time_zone">Time zone<font class="cyxy-trs-target"> 时区</font></span></h3>
+<p class="cyxy-trs-source cyxy-trs-source-ted">Set the <a href="/index.php/Time_zone" class="mw-redirect" title="Time zone">time zone</a>:
+</p><p class="cyxy-trs-source cyxy-trs-target" contenteditable="false">设定时区:</p>
+<pre># ln -sf /usr/share/zoneinfo/<i>Region</i>/<i>City</i> /etc/localtime
+</pre>
+<p class="cyxy-trs-source cyxy-trs-source-ted">Run <span class="plainlinks archwiki-template-man" title="$ man 8 hwclock"><a rel="nofollow" class="external text" href="https://jlk.fjfi.cvut.cz/arch/manpages/man/hwclock.8">hwclock(8)</a></span> to generate <code>/etc/adjtime</code>:
+</p><p class="cyxy-trs-source cyxy-trs-target" contenteditable="false">运行 hwclock (8)生成 / etc / adjtime:</p>
+<pre># hwclock --systohc
+</pre>
+<p class="cyxy-trs-source cyxy-trs-source-ted">This command assumes the hardware clock is set to <a href="https://en.wikipedia.org/wiki/UTC" class="extiw" title="wikipedia:UTC">UTC</a>. See <a href="/index.php/System_time#Time_standard" title="System time">System time#Time standard</a> for details.
+</p><p class="cyxy-trs-source cyxy-trs-target" contenteditable="false">此命令假定硬件时钟设置为 UTC。详情请参阅系统时间 # time 标准。</p>
+<h3><span class="mw-headline cyxy-trs-source cyxy-trs-source-ted" id="Localization">Localization<font class="cyxy-trs-target"> 本地化</font></span></h3>
+<p class="cyxy-trs-source cyxy-trs-source-ted">Edit <code>/etc/locale.gen</code> and uncomment <code>en_US.UTF-8 UTF-8</code> and other needed <a href="/index.php/Locale" title="Locale">locales</a>. Generate the locales by running:
+</p><p class="cyxy-trs-source cyxy-trs-target" contenteditable="false">编辑 / etc / locale. gen 并在 us. UTF-8 UTF-8和其他需要的区域设置中取消注释。通过运行生成区域设置:</p>
+<pre># locale-gen
+</pre>
+<p class="cyxy-trs-source cyxy-trs-source-ted">Create the <span class="plainlinks archwiki-template-man" title="$ man 5 locale.conf"><a rel="nofollow" class="external text" href="https://jlk.fjfi.cvut.cz/arch/manpages/man/locale.conf.5">locale.conf(5)</a></span> file, and set the <code>LANG</code> <a href="/index.php/Variable" class="mw-redirect" title="Variable">variable</a> accordingly:
+</p><p class="cyxy-trs-source cyxy-trs-target" contenteditable="false">创建 locale.conf (5)文件，并相应地设置 LANG 变量:</p>
+<pre style="margin-bottom: 0; border-bottom:none; padding-bottom:0.8em;">/etc/locale.conf</pre>
+<pre style="margin-top: 0; border-top-style:dashed; padding-top: 0.8em;">LANG=<i>en_US.UTF-8</i></pre>
+<p class="cyxy-trs-source cyxy-trs-source-ted">If you <a href="#Set_the_keyboard_layout">set the keyboard layout</a>, make the changes persistent in <span class="plainlinks archwiki-template-man" title="$ man 5 vconsole.conf"><a rel="nofollow" class="external text" href="https://jlk.fjfi.cvut.cz/arch/manpages/man/vconsole.conf.5">vconsole.conf(5)</a></span>:
+</p><p class="cyxy-trs-source cyxy-trs-target" contenteditable="false">如果您设置了键盘布局，那么可以在 vconsole.conf (5)中保持更改:</p>
+<pre style="margin-bottom: 0; border-bottom:none; padding-bottom:0.8em;">/etc/vconsole.conf</pre>
+<pre style="margin-top: 0; border-top-style:dashed; padding-top: 0.8em;">KEYMAP=<i>de-latin1</i></pre>
+<h3><span class="mw-headline cyxy-trs-source cyxy-trs-source-ted" id="Network_configuration">Network configuration<font class="cyxy-trs-target"> 网络配置</font></span></h3>
+<p class="cyxy-trs-source cyxy-trs-source-ted">Create the <a href="/index.php/Hostname" class="mw-redirect" title="Hostname">hostname</a> file:
+</p><p class="cyxy-trs-source cyxy-trs-target" contenteditable="false">创建主机名文件:</p>
+<pre style="margin-bottom: 0; border-bottom:none; padding-bottom:0.8em;">/etc/hostname</pre>
+<pre style="margin-top: 0; border-top-style:dashed; padding-top: 0.8em;"><i>myhostname</i>
+</pre>
+<p class="cyxy-trs-source cyxy-trs-source-ted">Add matching entries to <span class="plainlinks archwiki-template-man" title="$ man 5 hosts"><a rel="nofollow" class="external text" href="https://jlk.fjfi.cvut.cz/arch/manpages/man/hosts.5">hosts(5)</a></span>:
+</p><p class="cyxy-trs-source cyxy-trs-target" contenteditable="false">向主机添加匹配条目(5) :</p>
+<pre style="margin-bottom: 0; border-bottom:none; padding-bottom:0.8em;">/etc/hosts</pre>
+<pre style="margin-top: 0; border-top-style:dashed; padding-top: 0.8em;">127.0.0.1	localhost
+::1		localhost
+127.0.1.1	<i>myhostname</i>.localdomain	<i>myhostname</i>
+</pre>
+<p class="cyxy-trs-source cyxy-trs-source-ted">If the system has a permanent IP address, it should be used instead of <code>127.0.1.1</code>.
+</p><p class="cyxy-trs-source cyxy-trs-target" contenteditable="false">如果系统有一个永久的 IP 地址，应该使用它而不是127.0.1.1。</p><p class="cyxy-trs-source cyxy-trs-source-ted">Complete the <a href="/index.php/Network_configuration" title="Network configuration">network configuration</a> for the newly installed environment, that includes installing your preferred <a href="/index.php/Network_management" class="mw-redirect" title="Network management">network management</a> software.
+</p><p class="cyxy-trs-source cyxy-trs-target" contenteditable="false">完成新安装环境的网络配置，包括安装首选的网络管理软件。</p>
+<h3><span class="mw-headline cyxy-trs-source" id="Initramfs">Initramfs</span></h3>
+<p class="cyxy-trs-source cyxy-trs-source-ted">Creating a new <i>initramfs</i> is usually not required, because <a href="/index.php/Mkinitcpio" title="Mkinitcpio">mkinitcpio</a> was run on installation of the <a href="/index.php/Kernel" title="Kernel">kernel</a> package with <i>pacstrap</i>.
+</p><p class="cyxy-trs-source cyxy-trs-target" contenteditable="false">通常不需要创建新的 initramfs，因为 mkinitcpio 是在使用 pacstrap 安装内核包时运行的。</p><p class="cyxy-trs-source cyxy-trs-source-ted">For <a href="/index.php/Install_Arch_Linux_on_LVM#Adding_mkinitcpio_hooks" title="Install Arch Linux on LVM">LVM</a>, <a href="/index.php/Dm-crypt" title="Dm-crypt">system encryption</a> or <a href="/index.php/RAID#Configure_mkinitcpio" title="RAID">RAID</a>, modify <span class="plainlinks archwiki-template-man" title="$ man 5 mkinitcpio.conf"><a rel="nofollow" class="external text" href="https://jlk.fjfi.cvut.cz/arch/manpages/man/mkinitcpio.conf.5">mkinitcpio.conf(5)</a></span> and recreate the initramfs image:
+</p><p class="cyxy-trs-source cyxy-trs-target" contenteditable="false">对于 LVM、系统加密或 RAID，修改 mkinitcpio.conf (5)并重新创建 initramfs 映像:</p>
+<pre># mkinitcpio -P
+</pre>
+<h3><span class="mw-headline cyxy-trs-source cyxy-trs-source-ted" id="Root_password">Root password<font class="cyxy-trs-target"> 根密码</font></span></h3>
+<p class="cyxy-trs-source cyxy-trs-source-ted">Set the root <a href="/index.php/Password" class="mw-redirect" title="Password">password</a>:
+</p><p class="cyxy-trs-source cyxy-trs-target" contenteditable="false">设置 root 密码:</p>
+<pre># passwd
+</pre>
+<h3><span class="mw-headline cyxy-trs-source cyxy-trs-source-ted" id="Boot_loader">Boot loader<font class="cyxy-trs-target" contenteditable="false"> 引导加载程序</font></span></h3>
+<p class="cyxy-trs-source cyxy-trs-source-ted">Choose and install a Linux-capable <a href="/index.php/Boot_loader" class="mw-redirect" title="Boot loader">boot loader</a>. If you have an Intel or AMD CPU, enable <a href="/index.php/Microcode" title="Microcode">microcode</a> updates in addition.
+</p><p class="cyxy-trs-source cyxy-trs-target" contenteditable="false">选择并安装一个支持 linux 的引导加载程序。如果您使用的是 Intel 或 AMD CPU，请另外启用微代码更新。</p>
+<h2><span class="mw-headline cyxy-trs-source cyxy-trs-source-ted" id="Reboot">Reboot<font class="cyxy-trs-target"> 重启</font></span></h2>
+<p class="cyxy-trs-source cyxy-trs-source-ted">Exit the chroot environment by typing <code>exit</code> or pressing <code>Ctrl+d</code>.
+</p><p class="cyxy-trs-source cyxy-trs-target" contenteditable="false">通过键入 Exit 或按 Ctrl + d 退出 chroot 环境。</p><p class="cyxy-trs-source cyxy-trs-source-ted">Optionally manually unmount all the partitions with <code>umount -R /mnt</code>: this allows noticing any "busy" partitions, and finding the cause with <span class="plainlinks archwiki-template-man" title="$ man 1 fuser"><a rel="nofollow" class="external text" href="https://jlk.fjfi.cvut.cz/arch/manpages/man/fuser.1">fuser(1)</a></span>.
+</p><p class="cyxy-trs-source cyxy-trs-target" contenteditable="false">可以选择使用 umount-r / mnt 手动卸载所有分区: 这允许注意到任何“忙碌”分区，并查找 fuser (1)的原因。</p><p class="cyxy-trs-source cyxy-trs-source-ted">Finally, restart the machine by typing <code>reboot</code>: any partitions still mounted will be automatically unmounted by <i>systemd</i>. Remember to remove the installation media and then login into the new system with the root account.
+</p><p class="cyxy-trs-source cyxy-trs-target" contenteditable="false">最后，通过键入 reboot 重新启动计算机: 任何仍然挂载的分区将由 systemd 自动卸载。 请记住删除安装媒体，然后使用 root 帐户登录到新系统。</p>
+<h2><span class="mw-headline cyxy-trs-source cyxy-trs-source-ted" id="Post-installation">Post-installation<font class="cyxy-trs-target"> 安装后</font></span></h2>
+<p class="cyxy-trs-source cyxy-trs-source-ted">See <a href="/index.php/General_recommendations" title="General recommendations">General recommendations</a> for system management directions and post-installation tutorials (like setting up a graphical user interface, sound or a touchpad).
+</p><p class="cyxy-trs-source cyxy-trs-target" contenteditable="false">请参阅系统管理方向和安装后教程的一般建议(如设置图形用户界面、声音或触摸板)。</p><p class="cyxy-trs-source cyxy-trs-source-ted">For a list of applications that may be of interest, see <a href="/index.php/List_of_applications" title="List of applications">List of applications</a>.
+</p><p class="cyxy-trs-source cyxy-trs-target" contenteditable="false">有关可能令人感兴趣的申请的清单，请参阅申请清单。</p>
+<!-- 
+NewPP limit report
+Cached time: 20200411152013
+Cache expiry: 86400
+Dynamic content: false
+Complications: []
+CPU time usage: 0.064 seconds
+Real time usage: 0.068 seconds
+Preprocessor visited node count: 861/1000000
+Preprocessor generated node count: 0/1000000
+Post‐expand include size: 6831/2097152 bytes
+Template argument size: 2419/2097152 bytes
+Highest expansion depth: 6/40
+Expensive parser function count: 0/100
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 0/5000000 bytes
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%   20.185      1 -total
+ 21.15%    4.269     10 Template:Man
+ 17.75%    3.582     40 Template:Ic
+ 12.97%    2.619      4 Template:Hc
+  9.21%    1.859      7 Template:Pkg
+  9.09%    1.834      1 Template:Tip
+  8.29%    1.674      3 Template:Note
+  7.40%    1.494      2 Template:Bc
+-->
+
+<!-- Saved in parser cache with key archwiki:pcache:idhash:14801-0!canonical and timestamp 20200411152013 and revision id 605384
+ -->
+</div></div>
+		
+		<div class="printfooter">Retrieved from "<a dir="ltr" href="https://wiki.archlinux.org/index.php?title=Installation_guide&amp;oldid=605384">https://wiki.archlinux.org/index.php?title=Installation_guide&amp;oldid=605384</a>"</div>
+		
+		<div id="catlinks" class="catlinks" data-mw="interface"><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/index.php/Special:Categories" title="Special:Categories" class="cyxy-trs-source cyxy-trs-source-ted">Category<font class="cyxy-trs-target"> 类别</font></a>: <ul><li><a href="/index.php/Category:Installation_process" title="Category:Installation process" class="cyxy-trs-source cyxy-trs-source-ted">Installation process<font class="cyxy-trs-target"> 安装过程</font></a></li></ul></div></div>
+		<div class="visualClear"></div>
+		
+	</div>
+</div>
+
+
+		<div id="mw-navigation">
+			<h2 class="cyxy-trs-source cyxy-trs-source-ted">Navigation menu</h2><h2 class="cyxy-trs-source cyxy-trs-target" contenteditable="false">导航菜单</h2>
+			<div id="mw-head">
+									<div id="p-personal" role="navigation" aria-labelledby="p-personal-label">
+						<h3 id="p-personal-label" class="cyxy-trs-source cyxy-trs-source-ted">Personal tools</h3><h3 id="p-personal-label" class="cyxy-trs-source cyxy-trs-target" contenteditable="false">个人工具</h3>
+						<ul>
+							<li id="pt-createaccount"><a href="/index.php?title=Special:CreateAccount&amp;returnto=Installation+guide" title="You are encouraged to create an account and log in; however, it is not mandatory" class="cyxy-trs-source cyxy-trs-source-ted">Create account<font class="cyxy-trs-target"> 创建账户</font></a></li><li id="pt-login"><a href="/index.php?title=Special:UserLogin&amp;returnto=Installation+guide" title="You are encouraged to log in; however, it is not mandatory [alt-shift-o]" accesskey="o" class="cyxy-trs-source cyxy-trs-source-ted">Log in<font class="cyxy-trs-target"> 登录</font></a></li>						</ul>
+					</div>
+									<div id="left-navigation">
+										<div id="p-namespaces" role="navigation" class="vectorTabs" aria-labelledby="p-namespaces-label">
+						<h3 id="p-namespaces-label" class="cyxy-trs-source cyxy-trs-source-ted">Namespaces</h3><h3 id="p-namespaces-label" class="cyxy-trs-source cyxy-trs-target" contenteditable="false">名称空间</h3>
+						<ul>
+							<li id="ca-nstab-main" class="selected"><span><a href="/index.php/Installation_guide" title="View the content page [alt-shift-c]" accesskey="c" class="cyxy-trs-source cyxy-trs-source-ted">Page<font class="cyxy-trs-target"> 第二页</font></a></span></li><li id="ca-talk"><span><a href="/index.php/Talk:Installation_guide" rel="discussion" title="Discussion about the content page [alt-shift-t]" accesskey="t" class="cyxy-trs-source cyxy-trs-source-ted">Discussion<font class="cyxy-trs-target"> 讨论</font></a></span></li>						</ul>
+					</div>
+										<div id="p-variants" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-variants-label">
+												<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-variants-label">
+						<h3 id="p-variants-label">
+							<span>Variants</span>
+						</h3>
+						<ul class="menu">
+													</ul>
+					</div>
+									</div>
+				<div id="right-navigation">
+										<div id="p-views" role="navigation" class="vectorTabs" aria-labelledby="p-views-label">
+						<h3 id="p-views-label" class="cyxy-trs-source cyxy-trs-source-ted">Views</h3><h3 id="p-views-label" class="cyxy-trs-source cyxy-trs-target" contenteditable="false">观点</h3>
+						<ul>
+							<li id="ca-view" class="collapsible selected"><span><a href="/index.php/Installation_guide" class="cyxy-trs-source cyxy-trs-source-ted">Read<font class="cyxy-trs-target"> 阅读</font></a></span></li><li id="ca-viewsource" class="collapsible"><span><a href="/index.php?title=Installation_guide&amp;action=edit" title="This page is protected.
+You can view its source [alt-shift-e]" accesskey="e" class="cyxy-trs-source cyxy-trs-source-ted">View source<font class="cyxy-trs-target"> 查看源代码</font></a></span></li><li id="ca-history" class="collapsible"><span><a href="/index.php?title=Installation_guide&amp;action=history" title="Past revisions of this page [alt-shift-h]" accesskey="h" class="cyxy-trs-source cyxy-trs-source-ted">View history<font class="cyxy-trs-target"> 查看历史</font></a></span></li>						</ul>
+					</div>
+										<div id="p-cactions" role="navigation" class="vectorMenu emptyPortlet" aria-labelledby="p-cactions-label">
+						<input type="checkbox" class="vectorMenuCheckbox" aria-labelledby="p-cactions-label">
+						<h3 id="p-cactions-label"><span>More</span></h3>
+						<ul class="menu">
+													</ul>
+					</div>
+										<div id="p-search" role="search">
+						<h3 class="cyxy-trs-source cyxy-trs-source-ted">
+							<label for="searchInput">Search</label>
+						</h3><h3 class="cyxy-trs-source cyxy-trs-target" contenteditable="false">搜寻</h3>
+						<form action="/index.php" id="searchform">
+							<div id="simpleSearch">
+								<input type="search" name="search" placeholder="Search ArchWiki" title="Search ArchWiki [alt-shift-f]" accesskey="f" id="searchInput" autocomplete="off"><input type="hidden" value="Special:Search" name="title"><input type="submit" name="go" value="Go" title="Go to a page with this exact name if it exists" id="searchButton" class="searchButton">							</div>
+						</form>
+					</div>
+									</div>
+			</div>
+			<div id="mw-panel">
+				<div id="p-logo" role="banner"><a class="mw-wiki-logo" href="/index.php/Main_page" title="Visit the main page"></a></div>
+						<div class="portal" role="navigation" id="p-navigation" aria-labelledby="p-navigation-label">
+			<h3 id="p-navigation-label" class="cyxy-trs-source cyxy-trs-source-ted">Navigation</h3><h3 id="p-navigation-label" class="cyxy-trs-source cyxy-trs-target" contenteditable="false">导航</h3>
+			<div class="body">
+								<ul>
+					<li id="n-mainpage-description"><a href="/index.php/Main_page" title="Visit the main page [alt-shift-z]" accesskey="z" class="cyxy-trs-source cyxy-trs-source-ted">Main page<font class="cyxy-trs-target"> 主页</font></a></li><li id="n-Table-of-contents"><a href="/index.php/Table_of_contents" class="cyxy-trs-source cyxy-trs-source-ted">Table of contents<font class="cyxy-trs-target"> 目录</font></a></li><li id="n-portal"><a href="/index.php/Getting_involved" title="Various ways Archers can contribute to the community" class="cyxy-trs-source cyxy-trs-source-ted">Getting involved<font class="cyxy-trs-target"> 参与进来</font></a></li><li id="n-currentevents"><a href="/index.php/ArchWiki:News" title="The latest lowdown on the wiki" class="cyxy-trs-source cyxy-trs-source-ted">Wiki news<font class="cyxy-trs-target"> 维基新闻</font></a></li><li id="n-randompage"><a href="/index.php/Special:Random" title="Load a random page [alt-shift-x]" accesskey="x" class="cyxy-trs-source cyxy-trs-source-ted">Random page<font class="cyxy-trs-target"> 随机页面</font></a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-Interaction" aria-labelledby="p-Interaction-label">
+			<h3 id="p-Interaction-label" class="cyxy-trs-source cyxy-trs-source-ted">Interaction</h3><h3 id="p-Interaction-label" class="cyxy-trs-source cyxy-trs-target" contenteditable="false">互动</h3>
+			<div class="body">
+								<ul>
+					<li id="n-help"><a href="/index.php/Category:Help" title="Wiki navigation, reading, and editing help" class="cyxy-trs-source cyxy-trs-source-ted">Help<font class="cyxy-trs-target"> 救命</font></a></li><li id="n-Contributing"><a href="/index.php/ArchWiki:Contributing" class="cyxy-trs-source cyxy-trs-source-ted">Contributing<font class="cyxy-trs-target"> 贡献</font></a></li><li id="n-recentchanges"><a href="/index.php/Special:RecentChanges" title="A list of recent changes in the wiki [alt-shift-r]" accesskey="r" class="cyxy-trs-source cyxy-trs-source-ted">Recent changes<font class="cyxy-trs-target"> 最近的变化</font></a></li><li id="n-Recent-talks"><a href="https://wiki.archlinux.org/index.php/Special:RecentChanges?namespace=0&amp;invert=1" rel="nofollow" class="cyxy-trs-source cyxy-trs-source-ted">Recent talks<font class="cyxy-trs-target"> 最近的会谈</font></a></li><li id="n-newpages"><a href="/index.php/Special:NewPages" class="cyxy-trs-source cyxy-trs-source-ted">New pages<font class="cyxy-trs-target"> 新页面</font></a></li><li id="n-Statistics"><a href="/index.php/ArchWiki:Statistics" class="cyxy-trs-source cyxy-trs-source-ted">Statistics<font class="cyxy-trs-target"> 统计数字</font></a></li><li id="n-Requests"><a href="/index.php/ArchWiki:Requests" class="cyxy-trs-source cyxy-trs-source-ted">Requests<font class="cyxy-trs-target"> 请求</font></a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-tb" aria-labelledby="p-tb-label">
+			<h3 id="p-tb-label" class="cyxy-trs-source cyxy-trs-source-ted">Tools</h3><h3 id="p-tb-label" class="cyxy-trs-source cyxy-trs-target" contenteditable="false">工具</h3>
+			<div class="body">
+								<ul>
+					<li id="t-whatlinkshere"><a href="/index.php/Special:WhatLinksHere/Installation_guide" title="A list of all wiki pages that link here [alt-shift-j]" accesskey="j" class="cyxy-trs-source cyxy-trs-source-ted">What links here<font class="cyxy-trs-target"> 这里有什么链接</font></a></li><li id="t-recentchangeslinked"><a href="/index.php/Special:RecentChangesLinked/Installation_guide" rel="nofollow" title="Recent changes in pages linked from this page [alt-shift-k]" accesskey="k" class="cyxy-trs-source cyxy-trs-source-ted">Related changes<font class="cyxy-trs-target"> 相关变化</font></a></li><li id="t-specialpages"><a href="/index.php/Special:SpecialPages" title="A list of all special pages [alt-shift-q]" accesskey="q" class="cyxy-trs-source cyxy-trs-source-ted">Special pages<font class="cyxy-trs-target"> 特别页面</font></a></li><li id="t-print"><a href="/index.php?title=Installation_guide&amp;printable=yes" rel="alternate" title="Printable version of this page [alt-shift-p]" accesskey="p" class="cyxy-trs-source cyxy-trs-source-ted">Printable version<font class="cyxy-trs-target"> 可列印版本</font></a></li><li id="t-permalink"><a href="/index.php?title=Installation_guide&amp;oldid=605384" title="Permanent link to this revision of the page" class="cyxy-trs-source cyxy-trs-source-ted">Permanent link<font class="cyxy-trs-target"> 永久链接</font></a></li><li id="t-info"><a href="/index.php?title=Installation_guide&amp;action=info" title="More information about this page" class="cyxy-trs-source cyxy-trs-source-ted">Page information<font class="cyxy-trs-target"> 网页资料</font></a></li>				</ul>
+							</div>
+		</div>
+			<div class="portal" role="navigation" id="p-lang" aria-labelledby="p-lang-label">
+			<h3 id="p-lang-label" class="cyxy-trs-source cyxy-trs-source-ted">In other languages</h3><h3 id="p-lang-label" class="cyxy-trs-source cyxy-trs-target" contenteditable="false">用其他语言</h3>
+			<div class="body">
+								<ul>
+					<li class="interlanguage-link interwiki-ar"><a href="https://wiki.archlinux.org/index.php/Installation_guide_(%D8%A7%D9%84%D8%B9%D8%B1%D8%A8%D9%8A%D8%A9)" title="Installation guide – العربية" lang="ar" hreflang="ar" class="interlanguage-link-target cyxy-trs-source">العربية</a></li><li class="interlanguage-link interwiki-bg"><a href="https://wiki.archlinux.org/index.php/Installation_guide_(%D0%91%D1%8A%D0%BB%D0%B3%D0%B0%D1%80%D1%81%D0%BA%D0%B8)" title="Installation guide – български" lang="bg" hreflang="bg" class="interlanguage-link-target cyxy-trs-source">Български</a></li><li class="interlanguage-link interwiki-bs"><a href="https://wiki.archlinux.org/index.php/Installation_guide_(Bosanski)" title="Installation guide – bosanski" lang="bs" hreflang="bs" class="interlanguage-link-target cyxy-trs-source cyxy-trs-source-ted">Bosanski<font class="cyxy-trs-target"> 女名女子名</font></a></li><li class="interlanguage-link interwiki-cs"><a href="https://wiki.archlinux.org/index.php/Installation_guide_(%C4%8Cesky)" title="Installation guide – čeština" lang="cs" hreflang="cs" class="interlanguage-link-target cyxy-trs-source cyxy-trs-source-ted">Čeština<font class="cyxy-trs-target"> 蒂娜</font></a></li><li class="interlanguage-link interwiki-da"><a href="https://wiki.archlinux.org/index.php/Installation_guide_(Dansk)" title="Installation guide – dansk" lang="da" hreflang="da" class="interlanguage-link-target cyxy-trs-source cyxy-trs-source-ted">Dansk<font class="cyxy-trs-target"> 男名男子名</font></a></li><li class="interlanguage-link interwiki-de"><a href="https://wiki.archlinux.de/title/Arch_Install_Scripts" title="Arch Install Scripts – Deutsch" lang="de" hreflang="de" class="interlanguage-link-target cyxy-trs-source cyxy-trs-source-ted">Deutsch<font class="cyxy-trs-target"> 德语</font></a></li><li class="interlanguage-link interwiki-el"><a href="https://wiki.archlinux.org/index.php/Installation_guide_(%CE%95%CE%BB%CE%BB%CE%B7%CE%BD%CE%B9%CE%BA%CE%AC)" title="Installation guide – Ελληνικά" lang="el" hreflang="el" class="interlanguage-link-target cyxy-trs-source">Ελληνικά</a></li><li class="interlanguage-link interwiki-es"><a href="https://wiki.archlinux.org/index.php/Installation_guide_(Espa%C3%B1ol)" title="Installation guide – español" lang="es" hreflang="es" class="interlanguage-link-target cyxy-trs-source cyxy-trs-source-ted">Español<font class="cyxy-trs-target"> 西班牙语</font></a></li><li class="interlanguage-link interwiki-fa"><a href="https://wiki.archusers.ir/index.php/%D8%B1%D8%A7%D9%87%D9%86%D9%85%D8%A7%DB%8C_%D8%AA%D8%A7%D8%B2%D9%87%E2%80%8C%DA%A9%D8%A7%D8%B1%D8%A7%D9%86" title="راهنمای تازه‌کاران – فارسی" lang="fa" hreflang="fa" class="interlanguage-link-target cyxy-trs-source">فارسی</a></li><li class="interlanguage-link interwiki-fi"><a href="https://wiki.archlinux.org/index.php/Installation_guide_(Suomi)" title="Installation guide – suomi" lang="fi" hreflang="fi" class="interlanguage-link-target cyxy-trs-source cyxy-trs-source-ted">Suomi<font class="cyxy-trs-target"> 女名女子名</font></a></li><li class="interlanguage-link interwiki-fr"><a href="https://wiki.archlinux.fr/Arch_install_scripts" title="Arch install scripts – français" lang="fr" hreflang="fr" class="interlanguage-link-target cyxy-trs-source cyxy-trs-source-ted">Français<font class="cyxy-trs-target"> (法国)《法语》月刊</font></a></li><li class="interlanguage-link interwiki-hr"><a href="https://wiki.archlinux.org/index.php/Installation_guide_(Hrvatski)" title="Installation guide – hrvatski" lang="hr" hreflang="hr" class="interlanguage-link-target cyxy-trs-source cyxy-trs-source-ted">Hrvatski<font class="cyxy-trs-target"> 赫尔瓦特斯基</font></a></li><li class="interlanguage-link interwiki-hu"><a href="https://wiki.archlinux.org/index.php/Installation_guide_(Magyar)" title="Installation guide – magyar" lang="hu" hreflang="hu" class="interlanguage-link-target cyxy-trs-source cyxy-trs-source-ted">Magyar<font class="cyxy-trs-target"> 女名女子名</font></a></li><li class="interlanguage-link interwiki-id"><a href="https://wiki.archlinux.org/index.php/Installation_guide_(Indonesia)" title="Installation guide – Bahasa Indonesia" lang="id" hreflang="id" class="interlanguage-link-target cyxy-trs-source cyxy-trs-source-ted">Bahasa Indonesia<font class="cyxy-trs-target"> 印尼语</font></a></li><li class="interlanguage-link interwiki-it"><a href="https://wiki.archlinux.org/index.php/Installation_guide_(Italiano)" title="Installation guide – italiano" lang="it" hreflang="it" class="interlanguage-link-target cyxy-trs-source cyxy-trs-source-ted">Italiano<font class="cyxy-trs-target"> 意大利人</font></a></li><li class="interlanguage-link interwiki-ja"><a href="https://wiki.archlinux.jp/index.php/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E3%82%AC%E3%82%A4%E3%83%89" title="インストールガイド – 日本語" lang="ja" hreflang="ja" class="interlanguage-link-target cyxy-trs-source cyxy-trs-source-ted">日本語<font class="cyxy-trs-target"> Japanese</font></a></li><li class="interlanguage-link interwiki-ko"><a href="https://wiki.archlinux.org/index.php/Installation_guide_(%ED%95%9C%EA%B5%AD%EC%96%B4)" title="Installation guide – 한국어" lang="ko" hreflang="ko" class="interlanguage-link-target cyxy-trs-source">한국어</a></li><li class="interlanguage-link interwiki-lt"><a href="https://wiki.archlinux.org/index.php/Installation_guide_(Lietuvi%C5%A1kai)" title="Installation guide – lietuvių" lang="lt" hreflang="lt" class="interlanguage-link-target cyxy-trs-source cyxy-trs-source-ted">Lietuvių<font class="cyxy-trs-target"> 列图维</font></a></li><li class="interlanguage-link interwiki-nl"><a href="https://wiki.archlinux.org/index.php/Installation_guide_(Nederlands)" title="Installation guide – Nederlands" lang="nl" hreflang="nl" class="interlanguage-link-target cyxy-trs-source">Nederlands</a></li><li class="interlanguage-link interwiki-pl"><a href="https://wiki.archlinux.org/index.php/Installation_guide_(Polski)" title="Installation guide – polski" lang="pl" hreflang="pl" class="interlanguage-link-target cyxy-trs-source cyxy-trs-source-ted">Polski<font class="cyxy-trs-target"> 女名女子名</font></a></li><li class="interlanguage-link interwiki-pt"><a href="https://wiki.archlinux.org/index.php/Installation_guide_(Portugu%C3%AAs)" title="Installation guide – português" lang="pt" hreflang="pt" class="interlanguage-link-target cyxy-trs-source cyxy-trs-source-ted">Português<font class="cyxy-trs-target"> 葡萄牙语</font></a></li><li class="interlanguage-link interwiki-ru"><a href="https://wiki.archlinux.org/index.php/Installation_guide_(%D0%A0%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9)" title="Installation guide – русский" lang="ru" hreflang="ru" class="interlanguage-link-target cyxy-trs-source">Русский</a></li><li class="interlanguage-link interwiki-sk"><a href="https://wiki.archlinux.org/index.php/Installation_guide_(Slovensk%C3%BD)" title="Installation guide – slovenčina" lang="sk" hreflang="sk" class="interlanguage-link-target cyxy-trs-source cyxy-trs-source-ted">Slovenčina<font class="cyxy-trs-target"> 斯洛文娜</font></a></li><li class="interlanguage-link interwiki-sr"><a href="https://wiki.archlinux.org/index.php/Installation_guide_(%D0%A1%D1%80%D0%BF%D1%81%D0%BA%D0%B8)" title="Installation guide – српски / srpski" lang="sr" hreflang="sr" class="interlanguage-link-target cyxy-trs-source cyxy-trs-source-ted">Српски / srpski<font class="cyxy-trs-target"> Srpski</font></a></li><li class="interlanguage-link interwiki-sv"><a href="https://wiki.archlinux.org/index.php/Installation_guide_(Svenska)" title="Installation guide – svenska" lang="sv" hreflang="sv" class="interlanguage-link-target cyxy-trs-source cyxy-trs-source-ted">Svenska<font class="cyxy-trs-target"> 女名女子名</font></a></li><li class="interlanguage-link interwiki-th"><a href="https://wiki.archlinux.org/index.php/Installation_guide_(%E0%B9%84%E0%B8%97%E0%B8%A2)" title="Installation guide – ไทย" lang="th" hreflang="th" class="interlanguage-link-target cyxy-trs-source cyxy-trs-source-ted">ไทย<font class="cyxy-trs-target"> Something something something</font></a></li><li class="interlanguage-link interwiki-tr"><a href="https://wiki.archlinux.org/index.php/Installation_guide_(T%C3%BCrk%C3%A7e)" title="Installation guide – Türkçe" lang="tr" hreflang="tr" class="interlanguage-link-target cyxy-trs-source cyxy-trs-source-ted">Türkçe<font class="cyxy-trs-target"> 好的</font></a></li><li class="interlanguage-link interwiki-zh-hans"><a href="https://wiki.archlinux.org/index.php/Installation_guide_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)" title="Installation guide – 中文（简体）‎" lang="zh-Hans" hreflang="zh-Hans" class="interlanguage-link-target cyxy-trs-source cyxy-trs-source-ted">中文（简体）‎<font class="cyxy-trs-target"> Chinese (simplified)</font></a></li><li class="interlanguage-link interwiki-zh-hant"><a href="https://wiki.archlinux.org/index.php/Installation_guide_(%E6%AD%A3%E9%AB%94%E4%B8%AD%E6%96%87)" title="Installation guide – 中文（繁體）‎" lang="zh-Hant" hreflang="zh-Hant" class="interlanguage-link-target cyxy-trs-source cyxy-trs-source-ted">中文（繁體）‎<font class="cyxy-trs-target"> Chinese (traditional)</font></a></li>				</ul>
+							</div>
+		</div>
+				</div>
+		</div>
+				<div id="footer" role="contentinfo">
+						<ul id="footer-info">
+								<li id="footer-info-lastmod" class="cyxy-trs-source cyxy-trs-source-ted"> This page was last edited on 10 April 2020, at 15:19.<font class="cyxy-trs-target" contenteditable="false"> 本页最后编辑于2020年4月10日15:19</font></li>
+								<li id="footer-info-copyright" class="cyxy-trs-source cyxy-trs-source">Content is available under <font class="cyxy-trs-target"> 内容可在</font><a class="external cyxy-trs-source cyxy-trs-source-ted" rel="nofollow" href="http://www.gnu.org/copyleft/fdl.html">GNU Free Documentation License 1.3 or later<font class="cyxy-trs-target"> GNU自由文档许可证1.3或更高</font></a> unless otherwise noted.<font class="cyxy-trs-target" contenteditable="false"> 除非另有说明</font></li>
+							</ul>
+						<ul id="footer-places">
+								<li id="footer-places-privacy"><a href="/index.php/ArchWiki:Privacy_policy" title="ArchWiki:Privacy policy" class="cyxy-trs-source cyxy-trs-source-ted">Privacy policy<font class="cyxy-trs-target"> 私隐政策</font></a></li>
+								<li id="footer-places-about"><a href="/index.php/ArchWiki:About" title="ArchWiki:About" class="cyxy-trs-source cyxy-trs-source-ted">About ArchWiki<font class="cyxy-trs-target"> 关于 ArchWiki</font></a></li>
+								<li id="footer-places-disclaimer"><a href="/index.php/ArchWiki:General_disclaimer" title="ArchWiki:General disclaimer" class="cyxy-trs-source cyxy-trs-source-ted">Disclaimers<font class="cyxy-trs-target"> 免责声明</font></a></li>
+							</ul>
+										<ul id="footer-icons" class="noprint">
+										<li id="footer-copyrightico">
+											</li>
+									</ul>
+						<div style="clear: both;"></div>
+		</div>
+		
+
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgPageParseReport":{"limitreport":{"cputime":"0.064","walltime":"0.068","ppvisitednodes":{"value":861,"limit":1000000},"ppgeneratednodes":{"value":0,"limit":1000000},"postexpandincludesize":{"value":6831,"limit":2097152},"templateargumentsize":{"value":2419,"limit":2097152},"expansiondepth":{"value":6,"limit":40},"expensivefunctioncount":{"value":0,"limit":100},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":0,"limit":5000000},"timingprofile":["100.00%   20.185      1 -total"," 21.15%    4.269     10 Template:Man"," 17.75%    3.582     40 Template:Ic"," 12.97%    2.619      4 Template:Hc","  9.21%    1.859      7 Template:Pkg","  9.09%    1.834      1 Template:Tip","  8.29%    1.674      3 Template:Note","  7.40%    1.494      2 Template:Bc"]},"cachereport":{"timestamp":"20200411152013","ttl":86400,"transientcontent":false}}});mw.config.set({"wgBackendResponseTime":67});});</script>
+
+<!-- Cached/compressed 20200412041249 -->
+
+<div class="suggestions" style="display: none; font-size: 13px;"><div class="suggestions-results"></div><div class="suggestions-special"></div></div><div class="cyxy-target-popup cyxy-trs-source" style="display: none;"><div style="margin: auto"><img id="cyxy-popup-left-slide" src="https://caiyunapp.com/imgs/webtrs/left-slide.png" style="display: none;"> <div id="cyxy-popup-userinfo"><img id="cyxy-popup-avatar" src="https://caiyunapp.com/imgs/xiaoyilogo.jpg"> <div id="cyxy-popup-name-time"> <span id="cyxy-popup-name">彩云小译</span> <span id="cyxy-popup-time">刚刚</span></div></div><div id="cyxy-popup-favour"><img id="cyxy-popup-favour-img" src="https://caiyunapp.com/images/favour.png"><span id="cyxy-popup-favour-num">0</span></div><img id="cyxy-popup-right-slide" src="https://caiyunapp.com/imgs/webtrs/right-slide.png" style="display: none;"></div></div><div class="cyxy-function cyxy-trs-source"><img class="cyxy-favorite-btn" src="https://www.caiyunapp.com/imgs/webtrs/fanyi-btn-hover.png"></div></body>
